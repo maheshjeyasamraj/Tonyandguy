@@ -969,8 +969,145 @@
     });
   </script>
 
-</body>
-</html>
+
+
+
+<!-- ✅ Hair Elegance Refined Section with Image Slider -->
+<section id="hair" class="hair-section">
+  <!-- Text Content -->
+  <div class="hair-content">
+    <h2>Hair Elegance Refined</h2>
+    <p>
+      Step into a world of tailored cuts, precision styling, and radiant color.<br>
+      Let our international stylists transform your hair with expert techniques and luxury treatments.<br>
+      From timeless cuts to trend-setting balayage, every session is crafted to suit your unique beauty.
+    </p>
+    <a class="hair-btn" href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Hair%20Consultation.">BOOK YOUR HAIR CONSULTATION</a>
+    <span class="hair-note">Because every strand deserves sophistication.</span>
+  </div>
+
+  <!-- Right Side: Auto Changing Images -->
+  <div class="hair-image-slider" id="hairImageSlider"></div>
+</section>
+
+<!-- ✅ CSS Styling -->
+<style>
+  .hair-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+    background-color: #fdfdfd;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .hair-content {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .hair-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .hair-content p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .hair-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .hair-btn:hover {
+    background-color: #444;
+  }
+
+  .hair-note {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+  }
+
+  .hair-image-slider {
+    flex: 1;
+    min-height: 420px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    transition: background-image 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hair-section {
+      flex-direction: column-reverse;
+      text-align: center;
+      padding: 40px 6%;
+    }
+
+    .hair-content h2 {
+      font-size: 28px;
+    }
+
+    .hair-image-slider {
+      width: 100%;
+    }
+  }
+</style>
+
+<!-- ✅ JavaScript for Auto Image Slider -->
+<script>
+  const hairImages = [
+    "hair1.webp",
+    "hair2.jpg",
+    "hair3.webp",
+    "hair4.jpg",
+    "hair5.webp",
+    "https://cdn.pixabay.com/photo/2020/07/20/19/24/woman-5423543_1280.jpg"
+  ];
+
+  let currentHairImage = 0;
+  const hairSlider = document.getElementById("hairImageSlider");
+
+  function changeHairImage() {
+    hairSlider.style.backgroundImage = `url('${hairImages[currentHairImage]}')`;
+    currentHairImage = (currentHairImage + 1) % hairImages.length;
+  }
+
+  // Initial load
+  changeHairImage();
+  setInterval(changeHairImage, 4000); // Change every 4 seconds
+</script>
+
 
 
 
