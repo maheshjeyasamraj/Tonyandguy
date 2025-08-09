@@ -8,21 +8,28 @@
   <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="image/x-icon" />
 
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+    <!-- Fonts used in your styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  
   <!-- Open Graph Meta -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://maheshjeyasamraj.github.io/Tonyandguy/" />
@@ -42,227 +49,7 @@
 
 
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fff;
-      color: #000;
-    }
-
-    /* Top Bar */
-    .top-bar {
-      background-color: #000;
-      color: #fff;
-      padding: 8px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 14px;
-      flex-wrap: wrap;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
-
-    .top-bar a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .top-bar a:hover {
-      color: #ccc;
-    }
-
-    .location {
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    /* Navbar */
-    .navbar-custom {
-      background-color: #fff;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 9999;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 20px;
-    }
-
-    .navbar-custom .logo img {
-      height: 60px;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    .navbar-custom nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    .navbar-custom nav a {
-      color: #000;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .navbar-custom nav a:hover {
-      border-bottom: 2px solid #000;
-    }
-
-    /* Hero Section */
-    #heroSection {
-      height: 80vh;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .carousel-item {
-      height: 80vh;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.55);
-      z-index: 1;
-    }
-
-    .carousel-caption {
-      z-index: 2;
-      bottom: 2%;
-      text-align: center;
-      color: #fff;
-      padding: 0 15px;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-    }
-
-    .carousel-caption h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.8rem;
-      font-weight: 600;
-    }
-
-    .carousel-caption p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      font-weight: 400;
-      color: #f8f8f8;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 30px;
-      border-radius: 50%;
-      background-size: 40px 40px;
-      transition: background-color 0.3s ease;
-    }
-
-    .carousel-control-prev-icon:hover,
-    .carousel-control-next-icon:hover {
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-
-    @media (max-width: 768px) {
-      .top-bar {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 8px;
-        font-size: 13px;
-        padding: 8px 15px;
-      }
-
-      .social-icons {
-        gap: 10px;
-        flex: 1;
-      }
-
-      .location {
-        flex: 1;
-        text-align: right;
-        font-size: 13px;
-      }
-
-      .navbar-custom {
-        flex-wrap: wrap;
-        padding: 10px 15px;
-      }
-
-      .menu-toggle {
-        display: block;
-        color: #000;
-      }
-
-      .navbar-custom nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #fff;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 999;
-        padding: 10px 20px;
-        border-top: 1px solid #eee;
-      }
-
-      .navbar-custom nav.active {
-        display: flex;
-      }
-
-      .carousel-caption {
-        padding: 10px;
-        bottom: 5%;
-      }
-
-      .carousel-caption h1 {
-        font-size: 2.5rem;
-      }
-
-      .carousel-caption p {
-        font-size: 1rem;
-      }
-
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
-        padding: 20px;
-        background-size: 30px 30px;
-      }
-
-      .navbar-custom .logo img {
-        height: 48px;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -289,7 +76,6 @@
     <a href="#bridal">Bridal Beauty</a>
     <a href="#hair">Hair</a>
     <a href="#" id="contactBtn">Contact</a>
-
   </nav>
 </div>
 
@@ -299,7 +85,7 @@
     <div class="carousel-inner">
 
       <!-- Slides -->
-      <div class="carousel-item active" style="background-image: url('hero11.jpg');">
+      <div class="carousel-item active" style="background-image: url('hero1z.webp');">
         <div class="hero-overlay"></div>
         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
           <h1 class="animate__animated animate__fadeInDown">Welcome to Toni & Guy Tellapur</h1>
@@ -307,7 +93,7 @@
         </div>
       </div>
 
-      <div class="carousel-item" style="background-image: url('hero2.jpg');">
+      <div class="carousel-item" style="background-image: url('hero2.webp');">
         <div class="hero-overlay"></div>
         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
           <h1 class="animate__animated animate__fadeInDown">Step into Style</h1>
@@ -323,7 +109,7 @@
         </div>
       </div>
 
-      <div class="carousel-item" style="background-image: url('hero4.jpg');">
+      <div class="carousel-item" style="background-image: url('hero4.webp');">
         <div class="hero-overlay"></div>
         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
           <h1 class="animate__animated animate__fadeInDown">Bridal Beauty Perfected</h1>
@@ -331,7 +117,7 @@
         </div>
       </div>
 
-      <div class="carousel-item" style="background-image: url('hero5.jpg');">
+      <div class="carousel-item" style="background-image: url('hero5.webp');">
         <div class="hero-overlay"></div>
         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
           <h1 class="animate__animated animate__fadeInDown">Exclusive Offers Await</h1>
@@ -352,577 +138,109 @@
   </div>
 </section>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Mobile Menu Toggle -->
-<script>
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-</script>
 
 
+  <section id="about" class="brand-section">
+    <div class="brand-container">
+      <!-- Text Content -->
+      <div class="brand-text">
+        <h2>Step into the World of Toni&Guy. Now in Tellapur, Hyderabad</h2>
+        <p>
+          We bring world-class hairdressing and beauty services to your neighborhood with the finesse and quality Toni&Guy is known for globally.
+          From haircuts to hair colour, smoothing to bridal services, every detail is delivered with expertise and care.
+        </p>
+        <p class="highlight">We’re not just a salon! We’re an experience.</p>
+        <p>
+          Our mission is to make every client walk out feeling 
+          confident, rejuvenated and looking their absolute best.
+        </p>
+      </div>
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+      <!-- Visual Side -->
+      <div class="brand-visual" id="visualImg">
+        <img src="brand-bg.webp" alt="Brand Visual" />
+      </div>
+    </div>
+  </section>
 
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fff;
-    }
 
-    .brand-section {
-      background-color: #fff;
-      padding: 80px 20px;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-    }
-
-    .brand-container {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1400px;
-      margin: 0 auto;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .brand-text {
-      flex: 1 1 50%;
-      padding: 40px;
-    }
-
-    .brand-text h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      font-weight: 700;
-      color: #000;
-      margin-bottom: 30px;
-    }
-
-    .brand-text p {
-      font-size: 18px;
-      line-height: 1.8;
-      color: #444;
-      margin-bottom: 20px;
-    }
-
-    .brand-text .highlight {
-      font-size: 20px;
-      font-weight: 600;
-      color: #000;
-      margin-top: 30px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .brand-visual {
-      flex: 1 1 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 500px;
-      border-radius: 12px;
-      overflow: hidden;
-      opacity: 0;
-      transform: scale(0.5);
-    }
-
-    .brand-visual.animate {
-      animation: bounceIn 1.3s ease-out forwards;
-    }
-
-    .brand-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow:
-        0 25px 80px rgba(0, 0, 0, 0.2),
-        0 12px 35px rgba(0, 0, 0, 0.1),
-        0 0 8px rgba(255, 255, 255, 0.05) inset;
-    }
-
-    @keyframes bounceIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.3);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1.1);
-      }
-      70% {
-        transform: scale(0.95);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    /* Responsive */
-    @media (max-width: 991px) {
-      .brand-section {
-        padding: 60px 20px;
-      }
-
-      .brand-container {
-        flex-direction: column;
-      }
-
-      .brand-text {
-        padding: 20px;
-        text-align: center;
-      }
-
-      .brand-text h2 {
-        font-size: 28px;
-        margin-bottom: 20px;
-      }
-
-      .brand-text p {
-        font-size: 16px;
-      }
-
-      .brand-text .highlight {
-        font-size: 18px;
-      }
-
-      .brand-visual {
-        width: 100%;
-        height: 300px;
-        margin-top: 30px;
-        border-radius: 10px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .brand-text h2 {
-        font-size: 24px;
-      }
-
-      .brand-text p {
-        font-size: 15px;
-      }
-
-      .brand-visual {
-        height: 250px;
-      }
-    }
-  </style>
-
-<section id="about" class="brand-section">
-  <div class="brand-container">
-    <!-- Text Content -->
-    <div class="brand-text">
-      <h2>Step into the World of Toni&Guy. Now in Tellapur, Hyderabad</h2>
-      <p>
-        We bring world-class hairdressing & beauty services to your neighborhood with the finesse & quality Toni&Guy is known for globally.
-        From haircuts to hair colour, smoothing to bridal services, every detail is delivered with expertise & care.
-      </p>
-      <p class="highlight">We’re not just a salon! We’re an experience.</p>
-      <p>
-        Our mission is to make every client walk out feeling 
-        confident, rejuvenated & looking their absolute best.
-      </p>
+  <!-- OUR EXPERTISE Section -->
+  <section id="service" class="expertise-section">
+    <div class="expertise-heading">
+      <h2>Our Expertise</h2>
+      <p>Discover the finest in international beauty and haircare services</p>
     </div>
 
-    <!-- Visual Side -->
-    <div class="brand-visual" id="visualImg">
-      <img src="brand-bg.jpg" alt="Brand Visual" />
-    </div>
-  </div>
-</section>
+    <div class="split-categories">
+      <!-- Panel 1 -->
+      <div class="category-panel" data-bg="body.webp">
+        <div class="overlay">
+          <h3>Bridal</h3>
+          <div class="hover-info">
+            <p>Let our international stylists craft your dream bridal look from elegant updos to flawless makeup and radiant hair treatments.</p>
+          </div>
+        </div>
+      </div>
 
-<!-- Scroll-triggered animation -->
-<script>
-  const visual = document.getElementById("visualImg");
+      <!-- Panel 2 -->
+      <div class="category-panel" data-bg="hair.webp">
+        <div class="overlay">
+          <h3>Hair</h3>
+          <div class="hover-info">
+            <p>Precision cuts, colour, keratin & advanced styling by internationally trained professionals.</p>
+          </div>
+        </div>
+      </div>
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        visual.classList.add("animate");
-        observer.unobserve(visual); // Only run once
-      }
-    });
-  }, {
-    threshold: 0.5
-  });
+      <!-- Panel 3 -->
+      <div class="category-panel" data-bg="facial.webp">
+        <div class="overlay">
+          <h3>Facial</h3>
+          <div class="hover-info">
+            <p>Brightening facials, anti-aging treatments & luxury skin care to make you glow from within.</p>
+          </div>
+        </div>
+      </div>
 
-  observer.observe(visual);
-</script>
+      <!-- Panel 4 -->
+      <div class="category-panel" data-bg="makeup.webp">
+        <div class="overlay">
+          <h3>Makeup</h3>
+          <div class="hover-info">
+            <p>Party & bridal makeup by expert artists – for flawless, camera-ready skin & features.</p>
+          </div>
+        </div>
+      </div>
 
-
-
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fff;
-    }
-
-    .expertise-section {
-      padding: 80px 20px 0;
-      background-color: #fff;
-    }
-
-    .expertise-heading {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .expertise-heading h2 {
-      font-size: 40px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      color: #000;
-      margin-bottom: 10px;
-    }
-
-    .expertise-heading p {
-      font-size: 18px;
-      color: #666;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    .split-categories {
-      display: flex;
-      width: 100%;
-      min-height: 80vh;
-      overflow: hidden;
-      flex-wrap: wrap;
-    }
-
-    .category-panel {
-      flex: 1;
-      min-width: 200px;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      transition: flex 0.6s ease-in-out;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 500px;
-    }
-
-    .category-panel:hover {
-      flex: 2;
-    }
-
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.55);
-      height: 100%;
-      width: 100%;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding: 40px;
-      text-align: center;
-      transition: background-color 0.4s ease;
-    }
-
-    .overlay h3 {
-      font-size: 26px;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 15px;
-    }
-
-    .hover-info {
-      opacity: 0;
-      max-width: 80%;
-      transition: opacity 0.5s ease;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    .category-panel:hover .hover-info {
-      opacity: 1;
-    }
-
-    /* Mobile & Tablet Responsive */
-    @media (max-width: 992px) {
-      .split-categories {
-        flex-direction: column;
-        min-height: auto;
-      }
-
-      .category-panel {
-        height: 300px;
-        flex: 1 !important;
-        margin-bottom: 20px;
-        animation: fadeInUp 0.8s ease-in-out both;
-      }
-
-      .hover-info {
-        opacity: 1;
-        font-size: 14px;
-      }
-
-      .expertise-heading h2 {
-        font-size: 32px;
-      }
-
-      .expertise-heading p {
-        font-size: 16px;
-      }
-
-      .overlay h3 {
-        font-size: 22px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .expertise-heading h2 {
-        font-size: 26px;
-      }
-
-      .expertise-heading p {
-        font-size: 15px;
-      }
-
-      .category-panel {
-        height: 250px;
-      }
-
-      .hover-info {
-        font-size: 13px;
-      }
-    }
-
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
-
-<!-- OUR EXPERTISE Section -->
-<section id="service" class="expertise-section">
-  <div class="expertise-heading">
-    <h2>Our Expertise</h2>
-    <p>Discover the finest in international beauty and haircare services</p>
-  </div>
-
-  <div class="split-categories">
-    <!-- Panel 1 -->
-    <div class="category-panel" style="background-image: url('body.jpg');">
-      <div class="overlay">
-        <h3>Bridal</h3>
-        <div class="hover-info">
-          <p>Let our international stylists craft your dream bridal look from elegant updos to flawless makeup and radiant hair treatments.</p>
+      <!-- Panel 5 -->
+      <div class="category-panel" data-bg="special.jpeg">
+        <div class="overlay">
+          <h3>Special Offers</h3>
+          <div class="hover-info">
+            <p>Exclusive launch deals, seasonal offers & premium packages for your transformation.</p>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Panel 2 -->
-    <div class="category-panel" style="background-image: url('hair.webp');">
-      <div class="overlay">
-        <h3>Hair</h3>
-        <div class="hover-info">
-          <p>Precision cuts, colour, keratin & advanced styling by internationally trained professionals.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="category-panel" style="background-image: url('facial.jpg');">
-      <div class="overlay">
-        <h3>Facial</h3>
-        <div class="hover-info">
-          <p>Brightening facials, anti-aging treatments & luxury skin care to make you glow from within.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Panel 4 -->
-    <div class="category-panel" style="background-image: url('makeup.webp');">
-      <div class="overlay">
-        <h3>Makeup</h3>
-        <div class="hover-info">
-          <p>Party & bridal makeup by expert artists – for flawless, camera-ready skin & features.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Panel 5 -->
-    <div class="category-panel" style="background-image: url('special.jpeg');">
-      <div class="overlay">
-        <h3>Special Offers</h3>
-        <div class="hover-info">
-          <p>Exclusive launch deals, seasonal offers & premium packages for your transformation.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
 
 
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fff;
-      color: #000;
-    }
-    /* Bridal Beauty Section */
-    .bridal-section {
-      width: 100%;
-      background-color: #f9f9f9;
-    }
-
-    .bridal-container {
-      display: flex;
-      flex-wrap: wrap;
-      min-height: 100vh;
-    }
-
-    .bridal-slider-wrapper {
-      flex: 1 1 50%;
-      position: relative;
-      min-height: 400px;
-      overflow: hidden;
-    }
-
-    .bridal-image-slider img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    .bridal-image-slider img.active {
-      opacity: 1;
-      z-index: 1;
-    }
-
-    .bridal-content {
-      flex: 1 1 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 60px;
-      background-color: #fff;
-    }
-
-    .bridal-content h2 {
-      font-size: 40px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: #000;
-    }
-
-    .bridal-content p {
-      font-size: 18px;
-      color: #444;
-      margin-bottom: 30px;
-      line-height: 1.8;
-      max-width: 500px;
-    }
-
-    .bridal-btn {
-      background-color: #000;
-      color: #fff;
-      text-decoration: none;
-      padding: 14px 32px;
-      font-weight: 600;
-      font-size: 16px;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-
-    .bridal-btn:hover {
-      background-color: #333;
-    }
-
-    @media (max-width: 768px) {
-      .bridal-container {
-        flex-direction: column;
-        height: auto;
-      }
-
-      .bridal-slider-wrapper {
-        order: 1;
-        width: 100%;
-        height: 300px;
-      }
-
-      .bridal-content {
-        order: 2;
-        padding: 40px 20px;
-        align-items: center;
-        text-align: center;
-      }
-
-      .bridal-content h2 {
-        font-size: 28px;
-      }
-
-      .bridal-content p {
-        font-size: 16px;
-      }
-
-      .bridal-btn {
-        font-size: 14px;
-        padding: 12px 28px;
-      }
-    }
-  </style>
-
-
-
-  <!-- ⭐ BRIDAL BEAUTY SECTION -->
+<!-- ⭐ BRIDAL BEAUTY SECTION -->
   <section id="bridal" class="bridal-section">
     <div class="bridal-container">
+
       <!-- Image Slider -->
       <div class="bridal-slider-wrapper">
-        <div class="bridal-image-slider" id="bridalSlider">
-          <img src="bridal1.jpg" alt="Bridal Look 1">
-          <img src="bridal2.jpg" alt="Bridal Look 2">
-          <img src="bridal3.jpg" alt="Bridal Look 3">
-          <img src="bridal4.jpg" alt="Bridal Look 4">
-          <img src="bridal5.jpg" alt="Bridal Look 5">
+        <div class="bridal-image-slider" id="bridalSlider" aria-hidden="false">
+          <img src="bridal1.webp" alt="Bridal Look 1" />
+          <img src="bridal2.webp" alt="Bridal Look 2" />
+          <img src="bridal3.webp" alt="Bridal Look 3" />
+          <img src="bridal4.webp" alt="Bridal Look 4" />
+          <img src="bridal5.webp" alt="Bridal Look 5" />
         </div>
       </div>
 
@@ -930,458 +248,301 @@
       <div class="bridal-content">
         <h2>Bridal Beauty Perfected</h2>
         <p>
-          Book Your Wedding Consultation Today.<br>
-          Let our international stylists craft your dream bridal look from elegant updos to flawless makeup and radiant hair treatments.
+          Book your wedding consultation today. Let our international stylists craft your dream bridal look
+          elegant updos, flawless makeup and radiant hair treatments tailored to you.
         </p>
-        <a class="bridal-btn" href="https://wa.me/919030015757?text=Interested%20in%20Gold%20Membership" target="_blank" rel="noopener">
+        <a class="bridal-btn" href="https://wa.me/919030015757?text=Interested%20in%20Gold%20Membership" target="_blank" rel="noopener" aria-label="Book now on WhatsApp">
           BOOK NOW
         </a>
       </div>
+
     </div>
   </section>
 
-  <!-- ⭐ BRIDAL SLIDER SCRIPT -->
-  <script>
-    const images = document.querySelectorAll('#bridalSlider img');
-    let current = 0;
 
-    function showSlide(index) {
-      images.forEach((img, i) => {
-        img.classList.remove('active');
-        if (i === index) {
-          img.classList.add('active');
-        }
-      });
-    }
 
-    function nextSlide() {
-      current = (current + 1) % images.length;
-      showSlide(current);
-    }
 
-    document.addEventListener("DOMContentLoaded", function () {
-      showSlide(current);
-      setInterval(nextSlide, 5000); // Change every 5 seconds
-    });
-  </script>
+  <!-- ✅ Section: Hair Elegance Refined -->
+<section id="hair" class="hair-section">
+  <!-- Text -->
+  <div class="hair-content">
+    <h2>Hair Elegance Refined</h2>
+    <p>
+      Step into a world of tailored cuts, precision styling, and radiant color. Let our international
+      stylists transform your hair with expert techniques & luxury treatments. From timeless cuts to
+      trend-setting balayage, every session is crafted to suit your unique beauty.
+    </p>
+    <a class="hair-btn" href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Hair%20Consultation.">BOOK YOUR HAIR CONSULTATION</a>
+    <span class="hair-note">Because every strand deserves sophistication.</span>
+  </div>
+
+  <!-- Cards -->
+  <div class="hair-card-slider">
+    <div class="hair-card-wrapper" id="hairCardWrapper"></div>
+  </div>
+</section>
+
+
 
 
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
+    :root { --bg: #fff; --text:#111; --muted:#666; --card-shadow: 0 6px 18px rgba(0,0,0,.08); }
+
+    /* 💎 Price Gallery Section */
+    .price-gallery {
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 80px 30px 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    .price-gallery .gallery-header { text-align: center; margin-bottom: 40px; }
+    .price-gallery .gallery-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 1px; color: #000;
+    }
+    .price-gallery .gallery-header p {
+      font-size: 16px; color: var(--muted); margin-top: 10px; font-weight: 300;
+    }
+
+    .price-gallery .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 450px;
+      gap: 0;
+    }
+    .price-gallery .gallery-item {
+      position: relative; overflow: hidden; cursor: pointer; outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .price-gallery .gallery-item[tabindex] { cursor: pointer; }
+    .price-gallery .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.4s ease-in-out; will-change: transform;
+    }
+    .price-gallery .gallery-item:hover img,
+    .price-gallery .gallery-item:focus-within img { transform: scale(1.05); }
+
+    .price-gallery .hover-price {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      text-align: center; padding: 18px 16px;
+      background: rgba(255,255,255,0.95); color: #000;
+      font-size: 18px; font-weight: 600;
+      opacity: 0; transform: translateY(6px);
+      transition: opacity 0.32s ease-in-out, transform 0.32s ease-in-out;
+      font-family: 'Poppins', sans-serif; letter-spacing: 1px; text-transform: uppercase;
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+    }
+    .price-gallery .gallery-item:hover .hover-price,
+    .price-gallery .gallery-item:focus-within .hover-price {
+      opacity: 1; transform: translateY(0);
+    }
+    .price-text { display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap; }
+    .service-name { font-size:14px; color:#111; text-transform:uppercase; letter-spacing:1px; }
+    .service-price { font-size:20px; color:#111; font-weight:800; }
+
+    .book-btn {
+      background: #111; color: #fff; border: none; padding: 10px 18px;
+      font-size: 14px; border-radius: 8px; cursor: pointer;
+      font-weight: 700; transition: transform .15s ease, box-shadow .15s;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+    .book-btn:active { transform: translateY(1px); }
+    .book-btn:hover { box-shadow: 0 10px 24px rgba(0,0,0,0.14); }
+
+    /* ---------- Popup ---------- */
+    .popup-overlay {
+      position: fixed; inset: 0; display: none;
+      align-items: center; justify-content: center;
+      background: rgba(0,0,0,0.58); z-index: 1200; padding: 30px;
+    }
+    .popup-box {
+      width: 100%; max-width: 540px; background: #fff; border-radius: 12px;
+      padding: 28px; box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+      position: relative; font-family: 'Poppins', sans-serif;
+    }
+    .popup-box .close-popup {
+      position: absolute; right: 14px; top: 12px;
+      border: none; background: transparent; font-size: 22px; cursor: pointer; color: #333;
+    }
+    .popup-box h3 { margin: 0 0 8px; font-family: 'Playfair Display', serif; font-size: 22px; color: #111; }
+    .popup-box p.selected { margin: 0 0 14px; color: var(--muted); font-size: 14px; }
+
+    .popup-box form {
+      display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 6px;
+    }
+    input[type="text"], input[type="tel"], input[type="email"], textarea {
+      width: 100%; padding: 10px; border: 1px solid #ccc;
+      border-radius: 4px; font-size: 16px; background-color: #f5f8ff;
       box-sizing: border-box;
     }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fff;
-      color: #111;
-      overflow-x: hidden;
+    .popup-box textarea { min-height: 90px; }
+    .popup-box button[type="submit"] {
+      background: #111; color: #fff; border: none; padding: 12px;
+      border-radius: 8px; cursor: pointer; font-weight:700; font-size: 14px;
     }
 
-    /* ✅ Hair Section */
-    .hair-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 40px;
-      padding: 4vw 5vw;
-      background-color: #fdfdfd;
-      max-width: 1200px;
-      margin: auto;
+    @media (max-width: 1200px) {
+      .price-gallery .gallery-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 400px; }
     }
-
-    .hair-content {
-      flex: 1;
-      min-width: 280px;
-      padding-top: 60px;
+    @media (max-width: 900px) {
+      .price-gallery .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 350px; }
+      .price-gallery .gallery-header h2 { font-size: 30px; }
     }
-    .hair-content h2 {
-      font-size: 40px;
-      font-weight: 800;
-      font-family: 'Playfair Display', serif;
-      letter-spacing: -1px;
-      line-height: 1.1;
-      margin-bottom: 16px;
-}
-        .hair-content p {
-      font-size: 18px;
-      color: #444;
-      margin-bottom: 30px;
-      line-height: 1.8;
-      max-width: 500px;
-    }
-
-    .hair-btn {
-      display: inline-block;
-      padding: 12px 24px;
-      font-size: clamp(13px, 2.5vw, 15px);
-      background-color: #000;
-      color: #fff;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-    }
-
-    .hair-btn:hover {
-      background-color: #444;
-    }
-
-    .hair-note {
-      display: block;
-      margin-top: 12px;
-      font-size: clamp(12px, 2vw, 14px);
-      color: #888;
-      font-style: italic;
-    }
-
-    /* ✅ Slider */
-    .hair-card-slider {
-      flex: 1;
-      overflow: hidden;
-      min-width: 280px;
-      max-width: 600px;
-    }
-
-    .hair-card-wrapper {
-      display: flex;
-      transition: transform 1s ease-in-out;
-    }
-
-    .hair-card {
-      flex: 0 0 50%;
-      padding: 10px;
-    }
-
-    .hair-card-inner {
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    .hair-card-inner img {
-      width: 100%;
-      height: auto;
-      max-height: 300px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .hair-card-inner h3 {
-      font-size: clamp(16px, 3vw, 18px);
-      margin: 15px 0 10px;
-    }
-
-    .hair-card-inner p {
-      font-size: clamp(12px, 2.5vw, 14px);
-      color: #666;
-      padding: 0 12px 15px;
-      line-height: 1.5;
-    }
-
-    /* ✅ Responsive */
-    @media (max-width: 768px) {
-      .hair-section {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 6vw 4vw;
-        gap: 32px;
-      }
-       .hair-content h2 {
-        font-size: 28px;
-      }
-      .hair-content p {
-        font-size: 16px;
-      }
-
-      .hair-card-slider {
-        width: 100%;
-        overflow-x: auto;
-      }
-
-      .hair-card-wrapper {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        transition: none !important;
-        transform: translateX(0%) !important;
-        gap: 12px;
-      }
-
-      .hair-card {
-        flex: 0 0 85%;
-        scroll-snap-align: start;
-        margin: 0 auto;
-      }
-
-      .hair-card-inner img {
-        height: 200px;
-      }
+    @media (max-width: 600px) {
+      .price-gallery .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 320px; }
+      .price-gallery .hover-price { font-size: 16px; padding: 15px; }
+      .price-gallery .gallery-header h2 { font-size: 26px; }
+      .price-gallery .gallery-header p { font-size: 14px; }
+      .popup-box { padding: 20px; }
+      .popup-box h3 { font-size: 20px; }
     }
   </style>
 
 
-  <!-- ✅ Section: Hair Elegance Refined -->
-  <section id="hair" class="hair-section">
-    <!-- Text -->
-    <div class="hair-content">
-      <h2>Hair Elegance Refined</h2>
-      <p>
-        Step into a world of tailored cuts, precision styling, and radiant color. Let our international
-        stylists transform your hair with expert techniques & luxury treatments. From timeless cuts to
-        trend-setting balayage, every session is crafted to suit your unique beauty.
-      </p>
-      <a class="hair-btn" href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Hair%20Consultation.">BOOK YOUR HAIR CONSULTATION</a>
-      <span class="hair-note">Because every strand deserves sophistication.</span>
-    </div>
-
-    <!-- Cards -->
-    <div class="hair-card-slider">
-      <div class="hair-card-wrapper" id="hairCardWrapper"></div>
-    </div>
-  </section>
-
-  <!-- ✅ JavaScript: Card Loader & Slider -->
-  <script>
-    const hairCardData = [
-      {
-        img: "hair1.webp",
-        title: "Voluminous Curls",
-        desc: "Luxurious bounce and long-lasting hold for glamorous evenings."
-      },
-      {
-        img: "hair2.jpg",
-        title: "Glossy Straight",
-        desc: "Sleek, frizz-free finish with intense shine and smoothness."
-      },
-      {
-        img: "hair3.webp",
-        title: "Bridal Hair",
-        desc: "Timeless traditional hairstyles tailored for your special day."
-      },
-      {
-        img: "hair4.jpg",
-        title: "Global Coloring",
-        desc: "Rich, even tone to enhance your personality with shine."
-      },
-      {
-        img: "hair5.webp",
-        title: "Keratin Treatment",
-        desc: "Frizz-free smoothness that lasts up to 6 months."
-      },
-      {
-        img: "Balayage Magic.jpg",
-        title: "Balayage Magic",
-        desc: "Natural sun-kissed highlights for effortless beauty."
-      }
-    ];
-
-    const wrapper = document.getElementById("hairCardWrapper");
-
-    function loadHairCards() {
-      hairCardData.forEach(card => {
-        const cardHTML = `
-          <div class="hair-card">
-            <div class="hair-card-inner">
-              <img src="${card.img}" alt="${card.title}">
-              <h3>${card.title}</h3>
-              <p>${card.desc}</p>
-            </div>
-          </div>`;
-        wrapper.innerHTML += cardHTML;
-      });
-    }
-
-    let cardIndex = 0;
-
-    function slideHairCards() {
-      const isMobile = window.innerWidth <= 768;
-      if (isMobile) return;
-
-      const totalVisible = 2;
-      const totalCards = hairCardData.length;
-      const maxIndex = totalCards - totalVisible;
-
-      cardIndex = (cardIndex + 1) > maxIndex ? 0 : cardIndex + 1;
-      wrapper.style.transform = `translateX(-${cardIndex * 50}%)`;
-    }
-
-    loadHairCards();
-    setInterval(slideHairCards, 4000);
-  </script>
-
-
-
-
-
-
-
-
-
-
-<!-- 💎 PREMIUM FULLSCREEN PRICE SECTION (WHITE BG) -->
-<section class="price-gallery">
+<!-- ========== PRICE GALLERY ========== -->
+<section class="price-gallery" aria-label="Price gallery">
   <div class="gallery-header">
     <h2>Our Signature Salon Services</h2>
     <p>Luxury that Transforms, Crafted by Experts, Tailored for You</p>
   </div>
 
   <div class="gallery-grid">
-    <!-- Cards -->
-    <div class="gallery-item">
+    <div class="gallery-item" tabindex="0" data-service="Haircut" data-price="₹899">
       <img src="Price.webp" alt="Haircut">
-      <div class="hover-price">Haircut<br>₹899</div>
+      <div class="hover-price">
+        <div class="price-text"><span class="service-name">Haircut</span><span class="service-price">₹899</span></div>
+        <button class="book-btn" type="button">Book Now</button>
+      </div>
     </div>
-    <div class="gallery-item">
+    <div class="gallery-item" tabindex="0" data-service="Hair Spa" data-price="₹1499">
       <img src="Price.webp" alt="Hair Spa">
-      <div class="hover-price">Hair Spa<br>₹1499</div>
+      <div class="hover-price">
+        <div class="price-text"><span class="service-name">Hair Spa</span><span class="service-price">₹1499</span></div>
+        <button class="book-btn" type="button">Book Now</button>
+      </div>
     </div>
-    <div class="gallery-item">
+    <div class="gallery-item" tabindex="0" data-service="Hair Color" data-price="₹2499">
       <img src="Price.webp" alt="Hair Color">
-      <div class="hover-price">Hair Color<br>₹2499</div>
+      <div class="hover-price">
+        <div class="price-text"><span class="service-name">Hair Color</span><span class="service-price">₹2499</span></div>
+        <button class="book-btn" type="button">Book Now</button>
+      </div>
     </div>
-    <div class="gallery-item">
+    <div class="gallery-item" tabindex="0" data-service="Keratin" data-price="₹3999">
       <img src="Price.webp" alt="Keratin">
-      <div class="hover-price">Keratin<br>₹3999</div>
+      <div class="hover-price">
+        <div class="price-text"><span class="service-name">Keratin</span><span class="service-price">₹3999</span></div>
+        <button class="book-btn" type="button">Book Now</button>
+      </div>
     </div>
-    <div class="gallery-item">
+    <div class="gallery-item" tabindex="0" data-service="Styling" data-price="₹999">
       <img src="Price.webp" alt="Styling">
-      <div class="hover-price">Styling<br>₹999</div>
+      <div class="hover-price">
+        <div class="price-text"><span class="service-name">Styling</span><span class="service-price">₹999</span></div>
+        <button class="book-btn" type="button">Book Now</button>
+      </div>
     </div>
-    <div class="gallery-item">
+    <div class="gallery-item" tabindex="0" data-service="Hair Wash" data-price="₹499">
       <img src="Price.webp" alt="Hair Wash">
-      <div class="hover-price">Hair Wash<br>₹499</div>
+      <div class="hover-price">
+        <div class="price-text"><span class="service-name">Hair Wash</span><span class="service-price">₹499</span></div>
+        <button class="book-btn" type="button">Book Now</button>
+      </div>
     </div>
-    <div class="gallery-item">
+    <div class="gallery-item" tabindex="0" data-service="Facial" data-price="₹1099">
       <img src="Price.webp" alt="Facial">
-      <div class="hover-price">Facial<br>₹1099</div>
+      <div class="hover-price">
+        <div class="price-text"><span class="service-name">Facial</span><span class="service-price">₹1099</span></div>
+        <button class="book-btn" type="button">Book Now</button>
+      </div>
     </div>
-    <div class="gallery-item">
-      <img src="Price.webp" alt="Bridal">
-      <div class="hover-price">Bridal Makeup<br>₹6999</div>
+    <div class="gallery-item" tabindex="0" data-service="Bridal Makeup" data-price="₹6999">
+      <img src="Price.webp" alt="Bridal Makeup">
+      <div class="hover-price">
+        <div class="price-text"><span class="service-name">Bridal</span><span class="service-price">₹6999</span></div>
+        <button class="book-btn" type="button">Book Now</button>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 💎 Price Section CSS (Scoped, No Global Font Override) -->
-<style>
-  .price-gallery {
-    background-color: #fff;
-    color: #111;
-    padding: 80px 30px 0;
-    font-family: 'Poppins', sans-serif;
+<!-- ========== POPUP FORM ========== -->
+<div class="popup-overlay" id="popupForm" aria-hidden="true">
+  <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+    <button class="close-popup" aria-label="Close booking form">&times;</button>
+    <h3 id="bookingTitle">Book Your Service</h3>
+    <p class="selected" id="selectedService">Selected: </p>
+    <form id="bookingForm">
+      <input id="customerName" name="name" type="text" placeholder="Your name" required autocomplete="name">
+      <input id="customerPhone" name="phone" type="tel" placeholder="Your phone number" required pattern="[0-9]{10}" autocomplete="tel">
+      <textarea id="customerMessage" name="message" placeholder="Preferred date/time or notes (optional)"></textarea>
+      <input id="serviceInput" name="service" type="hidden" value="">
+      <input id="priceInput" name="price" type="hidden" value="">
+      <button type="submit">Send Request</button>
+    </form>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const popup = document.getElementById('popupForm');
+  const selectedServiceText = document.getElementById('selectedService');
+  const serviceInput = document.getElementById('serviceInput');
+  const priceInput = document.getElementById('priceInput');
+  const closeBtn = document.querySelector('.close-popup');
+  const bookingForm = document.getElementById('bookingForm');
+
+  document.querySelectorAll('.book-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const item = btn.closest('.gallery-item');
+      const service = item?.dataset.service || '';
+      const price = item?.dataset.price || '';
+      selectedServiceText.textContent = 'Selected: ' + service + ' : ' + price;
+      serviceInput.value = service;
+      priceInput.value = price;
+      popup.style.display = 'flex';
+      popup.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      setTimeout(()=> document.getElementById('customerName').focus(), 120);
+    });
+  });
+
+  function closePopup() {
+    popup.style.display = 'none';
+    popup.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
   }
 
-  .price-gallery .gallery-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
+  closeBtn.addEventListener('click', closePopup);
+  popup.addEventListener('click', function (e) { if (e.target === popup) closePopup(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && popup.style.display === 'flex') closePopup(); });
 
-  .price-gallery .gallery-header h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 38px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #000;
-  }
+  // WhatsApp Integration on Form Submit
+  bookingForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('customerName').value.trim();
+    const phone = document.getElementById('customerPhone').value.trim();
+    const message = document.getElementById('customerMessage').value.trim();
+    const service = document.getElementById('serviceInput').value;
+    const price = document.getElementById('priceInput').value;
 
-  .price-gallery .gallery-header p {
-    font-size: 16px;
-    color: #666;
-    margin-top: 10px;
-    font-weight: 300;
-  }
+    const whatsappNumber = "919030015757"; // 91 + your number
+    const whatsappMessage =
+      `New Booking Request:%0A` +
+      `Name: ${encodeURIComponent(name)}%0A` +
+      `Phone: ${encodeURIComponent(phone)}%0A` +
+      `Service: ${encodeURIComponent(service)}%0A` +
+      `Price: ${encodeURIComponent(price)}%0A` +
+      `Message: ${encodeURIComponent(message)}`;
 
-  .price-gallery .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 80vh;
-    gap: 0;
-  }
-
-  .price-gallery .gallery-item {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  }
-
-  .price-gallery .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: 0.4s ease-in-out;
-    border-radius: 0;
-  }
-
-  .price-gallery .hover-price {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
-    opacity: 0;
-    transition: 0.4s ease-in-out;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  .price-gallery .gallery-item:hover .hover-price {
-    opacity: 1;
-  }
-
-  /* ✅ Responsive */
-  @media (max-width: 1200px) {
-    .price-gallery .gallery-grid {
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: 70vh;
-    }
-  }
-
-  @media (max-width: 900px) {
-    .price-gallery .gallery-grid {
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: 60vh;
-    }
-
-    .price-gallery .gallery-header h2 {
-      font-size: 30px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .price-gallery .gallery-grid {
-      grid-template-columns: 1fr;
-      grid-auto-rows: 55vh;
-    }
-
-    .price-gallery .hover-price {
-      font-size: 16px;
-      padding: 15px;
-    }
-
-    .price-gallery .gallery-header h2 {
-      font-size: 26px;
-    }
-
-    .price-gallery .gallery-header p {
-      font-size: 14px;
-    }
-  }
-</style>
-
-
+    window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
+    closePopup();
+  });
+});
+</script>
 
 
 
@@ -2151,7 +1312,17 @@
 
 
 
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+<!-- Custom JS -->
+<script src="script.js"></script>
+<script src="expertise.js"></script>
+  <script src="script.js"></script>
+
+
+ <!-- External CSS -->
+  <link rel="stylesheet" href="bridal.css">
 
 
 
