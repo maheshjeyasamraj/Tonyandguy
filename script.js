@@ -103,33 +103,28 @@ const hairCardData = [
   {
     img: "hair1.webp",
     title: "Voluminous Curls",
-    desc: "Luxurious and long-lasting hold for glamorous evenings."
+    desc: "Luxurious & long-lasting hold for glamorous evenings."
   },
   {
     img: "hair2.webp",
     title: "Glossy Straight",
-    desc: "Sleek, frizz-free finish with intense shine and smoothness."
+    desc: "Sleek, frizz-free with intense shine & smoothness."
   },
   {
     img: "hair3.webp",
-    title: "Bridal Hair",
-    desc: "Timeless traditional hairstyles tailored for your special day."
-  },
-  {
-    img: "hair4.webp",
-    title: "Global Coloring",
-    desc: "Rich, even tone to enhance your personality with shine."
-  },
-  {
-    img: "hair5.webp",
     title: "Keratin Treatment",
     desc: "Frizz-free smoothness that lasts up to 6 months."
   },
   {
-    img: "Balayage Magic.webp",
-    title: "Balayage Magic",
-    desc: "Natural sun-kissed highlights for effortless beauty."
-  }
+    img: "hair4.webp",
+    title: "Global Coloring",
+    desc: "Rich tone to enhance your personality with shine."
+  },
+  {
+    img: "hair5.webp",
+    title: "Bridal Hair",
+    desc: "Timeless traditional hairstyles for special day."
+  },
 ];
 
 const wrapper = document.getElementById("hairCardWrapper");
@@ -169,3 +164,13 @@ setInterval(slideHairCards, 4000);
 
 
 
+
+document.querySelectorAll('.category-panel').forEach(panel => {
+  panel.addEventListener('click', function(e) {
+    if (!this.classList.contains('active')) {
+      e.preventDefault(); // prevent link clicks until active
+      document.querySelectorAll('.category-panel').forEach(p => p.classList.remove('active'));
+      this.classList.add('active');
+    }
+  });
+});

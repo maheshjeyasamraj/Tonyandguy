@@ -1,3 +1,6 @@
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -366,7 +369,7 @@ body {
 
 @media (max-width: 480px) {
   .brand-section {
-    padding: 30px 10px;
+    padding: 0px 15px;
   }
 
   .brand-text h2 {
@@ -383,6 +386,10 @@ body {
     margin-top: 15px;
   }
 }
+
+
+
+
 
 
 html {
@@ -472,8 +479,39 @@ body {
   line-height: 1.6;
 }
 
-.category-panel:hover .hover-info {
+.category-panel:hover .hover-info,
+.category-panel.active .hover-info {
   opacity: 1;
+}
+
+/* Premium Book Now Button */
+.book-now-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff6b6b, #ff9f43, #ffd32a);
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: all 0.4s ease;
+  background-size: 300% 300%;
+  animation: gradientMove 5s ease infinite;
+}
+
+.book-now-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Responsive */
@@ -491,7 +529,7 @@ body {
   }
 
   .hover-info {
-    opacity: 1;
+    opacity: 0; /* stays hidden until tapped */
     font-size: 14px;
   }
 
@@ -524,6 +562,11 @@ body {
   .hover-info {
     font-size: 13px;
   }
+
+  .book-now-btn {
+    padding: 12px 26px;
+    font-size: 14px;
+  }
 }
 
 @keyframes fadeInUp {
@@ -537,7 +580,7 @@ body {
   }
 }
 
-/* Reset + box-sizing */
+/* Reset */
 *,
 *::before,
 *::after {
@@ -545,6 +588,13 @@ body {
   margin: 0;
   padding: 0;
 }
+
+
+
+
+
+
+
 
 html {
   scroll-behavior: smooth;
@@ -726,6 +776,10 @@ body {
 /* Accessibility: show first image if JS disabled */
 .no-js .bridal-image-slider img { opacity: 0; }
 .no-js .bridal-image-slider img:first-child { opacity: 1; }
+
+
+
+
 
 
 
