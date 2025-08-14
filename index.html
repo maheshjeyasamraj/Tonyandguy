@@ -8,15 +8,8 @@
   <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="image/x-icon" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-    <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-    <!-- Fonts used in your styles -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -29,28 +22,19 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
-  
-  <!-- Open Graph Meta -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://maheshjeyasamraj.github.io/Tonyandguy/" />
-  <meta property="og:title" content="TONI & GUY Tellapur | Luxury Salon & Hair Studio in Hyderabad" />
-  <meta property="og:description" content="Experience premium haircuts, styling, and beauty treatments at Toni & Guy Tellapur. London-trained professionals, global styles, right in Hyderabad." />
-  <meta property="og:image" content="https://maheshjeyasamraj.github.io/Tonyandguy/og-image.png" />
 
-  <!-- Twitter Card Meta -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://maheshjeyasamraj.github.io/Tonyandguy/" />
-  <meta name="twitter:title" content="TONI&GUY Tellapur | Luxury Salon & Hair Studio in Hyderabad" />
-  <meta name="twitter:description" content="Experience premium haircuts, styling, and beauty treatments at Toni & Guy Tellapur. London-trained professionals, global styles, right in Hyderabad." />
-  <meta name="twitter:image" content="https://maheshjeyasamraj.github.io/Tonyandguy/og-image.png" />
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-
-
-
+  <!-- Apply Montserrat to entire site -->
+  <style>
+    html, body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    * {
+      font-family: inherit;
+    }
+  </style>
 
 </head>
+
 <body>
 
 <!-- Top Bar -->
@@ -144,7 +128,7 @@
     <div class="brand-container">
       <!-- Text Content -->
       <div class="brand-text">
-        <h2>Step into the World of Toni&Guy. Now in Tellapur, Hyderabad</h2>
+        <h2>Step into the World of Toni & Guy. Now in Tellapur, Hyderabad</h2>
         <p>
           We bring world-class hairdressing and beauty services to your neighborhood with the finesse and quality Toni&Guy is known for globally.
           From haircuts to hair colour, smoothing to bridal services, every detail is delivered with expertise and care.
@@ -158,71 +142,73 @@
 
       <!-- Visual Side -->
       <div class="brand-visual" id="visualImg">
-        <img src="brand-bg.webp" alt="Brand Visual" />
+        <img src="brand-bg.gif" alt="Brand Visual" />
       </div>
     </div>
   </section>
+
+
 
 
   <!-- OUR EXPERTISE Section -->
-  <section id="service" class="expertise-section">
-    <div class="expertise-heading">
-      <h2>Our Expertise</h2>
-      <p>Discover the finest in international beauty and haircare services</p>
-    </div>
+<section id="service" class="expertise-section">
+  <div class="expertise-heading">
+    <h2>Our Expertise</h2>
+    <p>Discover the finest in international beauty and haircare services</p>
+  </div>
 
-    <div class="split-categories">
-      <!-- Panel 1 -->
-      <div class="category-panel" data-bg="body.webp">
-        <div class="overlay">
-          <h3>Bridal</h3>
-          <div class="hover-info">
-            <p>Let our international stylists craft your dream bridal look from elegant updos to flawless makeup and radiant hair treatments.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Panel 2 -->
-      <div class="category-panel" data-bg="hair.webp">
-        <div class="overlay">
-          <h3>Hair</h3>
-          <div class="hover-info">
-            <p>Precision cuts, colour, keratin & advanced styling by internationally trained professionals.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Panel 3 -->
-      <div class="category-panel" data-bg="facial.webp">
-        <div class="overlay">
-          <h3>Facial</h3>
-          <div class="hover-info">
-            <p>Brightening facials, anti-aging treatments & luxury skin care to make you glow from within.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Panel 4 -->
-      <div class="category-panel" data-bg="makeup.webp">
-        <div class="overlay">
-          <h3>Makeup</h3>
-          <div class="hover-info">
-            <p>Party & bridal makeup by expert artists – for flawless, camera-ready skin & features.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Panel 5 -->
-      <div class="category-panel" data-bg="special.jpeg">
-        <div class="overlay">
-          <h3>Special Offers</h3>
-          <div class="hover-info">
-            <p>Exclusive launch deals, seasonal offers & premium packages for your transformation.</p>
-          </div>
+  <div class="split-categories">
+    <div class="category-panel" data-bg="body.webp">
+      <div class="overlay">
+        <h3>Bridal</h3>
+        <div class="hover-info">
+          <p>Let our international stylists craft your dream bridal look from elegant updos to flawless makeup and radiant hair treatments.</p>
+          <a href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Hair%20Consultation." class="book-now-btn">Book Now</a>
         </div>
       </div>
     </div>
-  </section>
+
+    <div class="category-panel" data-bg="hair.webp">
+      <div class="overlay">
+        <h3>Hair</h3>
+        <div class="hover-info">
+          <p>Precision cuts, colour, keratin & advanced styling by internationally trained professionals.</p>
+          <a href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Hair%20Consultation." class="book-now-btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-panel" data-bg="facial.webp">
+      <div class="overlay">
+        <h3>Facial</h3>
+        <div class="hover-info">
+          <p>Brightening facials, anti-aging treatments & luxury skin care to make you glow from within.</p>
+          <a href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Hair%20Consultation." class="book-now-btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-panel" data-bg="makeup.webp">
+      <div class="overlay">
+        <h3>Makeup</h3>
+        <div class="hover-info">
+          <p>Party & bridal makeup by expert artists – for flawless, camera-ready skin & features.</p>
+          <a href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Hair%20Consultation." class="book-now-btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-panel" data-bg="special.jpeg">
+      <div class="overlay">
+        <h3>Special Offers</h3>
+        <div class="hover-info">
+          <p>Exclusive launch deals, seasonal offers & premium packages for your transformation.</p>
+          <a href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Hair%20Consultation." class="book-now-btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -286,270 +272,588 @@
 
 
 
-  <style>
-    :root { --bg: #fff; --text:#111; --muted:#666; --card-shadow: 0 6px 18px rgba(0,0,0,.08); }
-
-    /* 💎 Price Gallery Section */
-    .price-gallery {
-      background-color: var(--bg);
-      color: var(--text);
-      padding: 80px 30px 0;
-      font-family: 'Poppins', sans-serif;
-    }
-    .price-gallery .gallery-header { text-align: center; margin-bottom: 40px; }
-    .price-gallery .gallery-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 38px; font-weight: 600;
-      text-transform: uppercase; letter-spacing: 1px; color: #000;
-    }
-    .price-gallery .gallery-header p {
-      font-size: 16px; color: var(--muted); margin-top: 10px; font-weight: 300;
-    }
-
-    .price-gallery .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 450px;
-      gap: 0;
-    }
-    .price-gallery .gallery-item {
-      position: relative; overflow: hidden; cursor: pointer; outline: none;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .price-gallery .gallery-item[tabindex] { cursor: pointer; }
-    .price-gallery .gallery-item img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
-      transition: transform 0.4s ease-in-out; will-change: transform;
-    }
-    .price-gallery .gallery-item:hover img,
-    .price-gallery .gallery-item:focus-within img { transform: scale(1.05); }
-
-    .price-gallery .hover-price {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      text-align: center; padding: 18px 16px;
-      background: rgba(255,255,255,0.95); color: #000;
-      font-size: 18px; font-weight: 600;
-      opacity: 0; transform: translateY(6px);
-      transition: opacity 0.32s ease-in-out, transform 0.32s ease-in-out;
-      font-family: 'Poppins', sans-serif; letter-spacing: 1px; text-transform: uppercase;
-      display: flex; flex-direction: column; align-items: center; gap: 10px;
-    }
-    .price-gallery .gallery-item:hover .hover-price,
-    .price-gallery .gallery-item:focus-within .hover-price {
-      opacity: 1; transform: translateY(0);
-    }
-    .price-text { display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap; }
-    .service-name { font-size:14px; color:#111; text-transform:uppercase; letter-spacing:1px; }
-    .service-price { font-size:20px; color:#111; font-weight:800; }
-
-    .book-btn {
-      background: #111; color: #fff; border: none; padding: 10px 18px;
-      font-size: 14px; border-radius: 8px; cursor: pointer;
-      font-weight: 700; transition: transform .15s ease, box-shadow .15s;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    }
-    .book-btn:active { transform: translateY(1px); }
-    .book-btn:hover { box-shadow: 0 10px 24px rgba(0,0,0,0.14); }
-
-    /* ---------- Popup ---------- */
-    .popup-overlay {
-      position: fixed; inset: 0; display: none;
-      align-items: center; justify-content: center;
-      background: rgba(0,0,0,0.58); z-index: 1200; padding: 30px;
-    }
-    .popup-box {
-      width: 100%; max-width: 540px; background: #fff; border-radius: 12px;
-      padding: 28px; box-shadow: 0 18px 50px rgba(0,0,0,0.35);
-      position: relative; font-family: 'Poppins', sans-serif;
-    }
-    .popup-box .close-popup {
-      position: absolute; right: 14px; top: 12px;
-      border: none; background: transparent; font-size: 22px; cursor: pointer; color: #333;
-    }
-    .popup-box h3 { margin: 0 0 8px; font-family: 'Playfair Display', serif; font-size: 22px; color: #111; }
-    .popup-box p.selected { margin: 0 0 14px; color: var(--muted); font-size: 14px; }
-
-    .popup-box form {
-      display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 6px;
-    }
-    input[type="text"], input[type="tel"], input[type="email"], textarea {
-      width: 100%; padding: 10px; border: 1px solid #ccc;
-      border-radius: 4px; font-size: 16px; background-color: #f5f8ff;
-      box-sizing: border-box;
-    }
-    .popup-box textarea { min-height: 90px; }
-    .popup-box button[type="submit"] {
-      background: #111; color: #fff; border: none; padding: 12px;
-      border-radius: 8px; cursor: pointer; font-weight:700; font-size: 14px;
-    }
-
-    @media (max-width: 1200px) {
-      .price-gallery .gallery-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 400px; }
-    }
-    @media (max-width: 900px) {
-      .price-gallery .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 350px; }
-      .price-gallery .gallery-header h2 { font-size: 30px; }
-    }
-    @media (max-width: 600px) {
-      .price-gallery .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 320px; }
-      .price-gallery .hover-price { font-size: 16px; padding: 15px; }
-      .price-gallery .gallery-header h2 { font-size: 26px; }
-      .price-gallery .gallery-header p { font-size: 14px; }
-      .popup-box { padding: 20px; }
-      .popup-box h3 { font-size: 20px; }
-    }
-  </style>
 
 
-<!-- ========== PRICE GALLERY ========== -->
+
+
+
+
+
+
+<!-- 🌟 PREMIUM GALLERY SECTION WITH CUSTOM FONT -->
+<style>
+/* ---------- CUSTOM FONT ---------- */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/mnt/data/395cb305-7c9d-4921-9480-24be640b7241.png') format('truetype'); /* replace if actual font file is .ttf or .woff */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ---------- VARIABLES ---------- */
+:root {
+  --bg: #fff;
+  --text:#111;
+  --muted:#666;
+  --card-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+/* ---------- GALLERY STYLES ---------- */
+.price-gallery {
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 80px 20px 50px;
+  font-family: 'CustomFont', sans-serif;
+}
+.gallery-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.gallery-header h2 {
+  font-family: 'CustomFont', serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.gallery-header p {
+  font-size: 16px;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+/* ---------- GRID ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 450px;
+  gap: 15px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.4s ease-in-out;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease-in-out;
+}
+.gallery-item:hover img,
+.gallery-item:focus-within img {
+  transform: scale(1.08);
+}
+
+/* ---------- PREMIUM GLASS ---------- */
+.premium-glass {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 0 0 16px 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.gallery-item:hover .premium-glass,
+.gallery-item:focus-within .premium-glass {
+  opacity: 1;
+  transform: translateY(0);
+}
+.price-text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.service-name { font-size: 14px; color: #111; text-transform: uppercase; letter-spacing:1px; font-family: 'CustomFont', sans-serif; }
+.service-price { font-size: 18px; font-weight:700; color: #111; font-family: 'CustomFont', sans-serif; }
+
+/* ---------- BUTTON ---------- */
+.book-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'CustomFont', sans-serif;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.book-btn:hover {
+  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+  transform: translateY(-2px);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1200px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 400px; } }
+@media (max-width: 900px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 350px; } }
+@media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 300px; } }
+@media (max-width: 480px) {
+  .gallery-header h2 { font-size: 26px; }
+  .gallery-header p { font-size: 14px; }
+  .service-name { font-size: 13px; }
+  .service-price { font-size: 16px; }
+  .book-btn { padding: 8px 14px; font-size: 13px; }
+}
+</style>
+
 <section class="price-gallery" aria-label="Price gallery">
   <div class="gallery-header">
-    <h2>Our Signature Salon Services</h2>
-    <p>Luxury that Transforms, Crafted by Experts, Tailored for You</p>
+    <h2>GALLERY</h2>
+    <p>Luxury that Transforms, Tailored for You</p>
   </div>
-
   <div class="gallery-grid">
     <div class="gallery-item" tabindex="0" data-service="Haircut" data-price="₹899">
-      <img src="Price.webp" alt="Haircut">
-      <div class="hover-price">
-        <div class="price-text"><span class="service-name">Haircut</span><span class="service-price">₹899</span></div>
-        <button class="book-btn" type="button">Book Now</button>
+      <img src="Interior8.jpg" alt="Haircut">
+      <div class="hover-price premium-glass">
+        <div class="price-text"><strong>Welcome</strong></div>
+
       </div>
     </div>
     <div class="gallery-item" tabindex="0" data-service="Hair Spa" data-price="₹1499">
-      <img src="Price.webp" alt="Hair Spa">
-      <div class="hover-price">
-        <div class="price-text"><span class="service-name">Hair Spa</span><span class="service-price">₹1499</span></div>
-        <button class="book-btn" type="button">Book Now</button>
+      <img src="Interior1.jpg" alt="Hair Spa">
+      <div class="hover-price premium-glass">
+        <div class="price-text"><strong>To</strong></div>
       </div>
     </div>
     <div class="gallery-item" tabindex="0" data-service="Hair Color" data-price="₹2499">
-      <img src="Price.webp" alt="Hair Color">
-      <div class="hover-price">
-        <div class="price-text"><span class="service-name">Hair Color</span><span class="service-price">₹2499</span></div>
-        <button class="book-btn" type="button">Book Now</button>
+      <img src="Interior2.jpg" alt="Hair Color">
+      <div class="hover-price premium-glass">
+        <div class="price-text"><strong>Toni & Guy</strong></div>        
       </div>
     </div>
     <div class="gallery-item" tabindex="0" data-service="Keratin" data-price="₹3999">
-      <img src="Price.webp" alt="Keratin">
-      <div class="hover-price">
-        <div class="price-text"><span class="service-name">Keratin</span><span class="service-price">₹3999</span></div>
-        <button class="book-btn" type="button">Book Now</button>
-      </div>
+      <img src="Interior3.jpg" alt="Keratin">
+      <div class="hover-price premium-glass">
+        <div class="price-text"><strong>Tellapur</strong></div>    
+              </div>
     </div>
     <div class="gallery-item" tabindex="0" data-service="Styling" data-price="₹999">
-      <img src="Price.webp" alt="Styling">
-      <div class="hover-price">
-        <div class="price-text"><span class="service-name">Styling</span><span class="service-price">₹999</span></div>
-        <button class="book-btn" type="button">Book Now</button>
+      <img src="Interior4.jpg" alt="Styling">
+      <div class="hover-price premium-glass">
+        <div class="price-text"><span class="service-name"></span><span class="service-price">Styling</span></div>
+
       </div>
     </div>
     <div class="gallery-item" tabindex="0" data-service="Hair Wash" data-price="₹499">
-      <img src="Price.webp" alt="Hair Wash">
-      <div class="hover-price">
-        <div class="price-text"><span class="service-name">Hair Wash</span><span class="service-price">₹499</span></div>
-        <button class="book-btn" type="button">Book Now</button>
+      <img src="Interior5.jpg" alt="Hair Wash">
+      <div class="hover-price premium-glass">
+        <div class="price-text"><span class="service-name"></span><span class="service-price">Hair Wash</span></div>
+
       </div>
     </div>
     <div class="gallery-item" tabindex="0" data-service="Facial" data-price="₹1099">
-      <img src="Price.webp" alt="Facial">
-      <div class="hover-price">
-        <div class="price-text"><span class="service-name">Facial</span><span class="service-price">₹1099</span></div>
-        <button class="book-btn" type="button">Book Now</button>
+      <img src="Interior6.jpg" alt="Facial">
+      <div class="hover-price premium-glass">
+        <div class="price-text"><span class="service-name"></span><span class="service-price">Facial</span></div>
       </div>
     </div>
     <div class="gallery-item" tabindex="0" data-service="Bridal Makeup" data-price="₹6999">
-      <img src="Price.webp" alt="Bridal Makeup">
-      <div class="hover-price">
-        <div class="price-text"><span class="service-name">Bridal</span><span class="service-price">₹6999</span></div>
-        <button class="book-btn" type="button">Book Now</button>
+      <img src="Interior9.jpg" alt="Bridal Makeup">
+      <div class="hover-price premium-glass">
+        <div class="price-text"><span class="service-name"></span><span class="service-price">Bridal</span></div>
+
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== POPUP FORM ========== -->
-<div class="popup-overlay" id="popupForm" aria-hidden="true">
-  <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
-    <button class="close-popup" aria-label="Close booking form">&times;</button>
-    <h3 id="bookingTitle">Book Your Service</h3>
-    <p class="selected" id="selectedService">Selected: </p>
-    <form id="bookingForm">
-      <input id="customerName" name="name" type="text" placeholder="Your name" required autocomplete="name">
-      <input id="customerPhone" name="phone" type="tel" placeholder="Your phone number" required pattern="[0-9]{10}" autocomplete="tel">
-      <textarea id="customerMessage" name="message" placeholder="Preferred date/time or notes (optional)"></textarea>
-      <input id="serviceInput" name="service" type="hidden" value="">
-      <input id="priceInput" name="price" type="hidden" value="">
+
+
+
+
+
+
+
+
+
+<style>
+:root{
+  --gold:#d4af37;
+  --text:#111;
+  --muted:#666;
+  --shadow: 0 12px 40px rgba(0,0,0,.2);
+  --btn-hover:#b38f2e;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:'Open Sans',sans-serif;
+  background:#fff;
+  color:var(--text);
+  scroll-behavior: smooth;
+}
+
+/* Section Layout */
+.premium-price-section{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  gap:40px;
+  max-width:1200px;
+  margin:auto;
+  padding:50px 20px;
+}
+
+.price-details{
+  flex:1 1 45%;
+}
+.price-details h2{
+  font-size:28px;
+  margin:0 0 30px;
+  font-weight:700;
+  border-bottom:2px solid var(--gold);
+  display:inline-block;
+  padding-bottom:6px;
+}
+
+.price-item{
+  position:relative;
+  margin-bottom:25px;
+  padding-bottom:15px;
+  border-bottom:1px solid #eee;
+  text-align:left;
+}
+.price-item h3{
+  margin:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:18px;
+  font-weight:600;
+}
+.price-item span{
+  font-size:18px;
+  font-weight:700;
+  color:var(--gold);
+  transition:opacity .3s ease;
+}
+.price-item p{
+  font-size:14px;
+  color:var(--muted);
+  margin:8px 0 0;
+  line-height:1.5;
+}
+
+.book-btn{
+  position:absolute;
+  right:0;
+  top:0;
+  opacity:0;
+  pointer-events:none;
+  background:var(--gold);
+  color:#fff;
+  border:none;
+  padding:8px 16px;
+  border-radius:6px;
+  font-size:14px;
+  cursor:pointer;
+  transition:opacity .3s ease,transform .2s ease, box-shadow .2s ease;
+  box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+.book-btn:active{transform:scale(.98)}
+
+@media (min-width:786px){
+  .price-item:hover span{opacity:0}
+  .price-item:hover .book-btn{opacity:1;pointer-events:auto}
+}
+
+/* Image Section */
+.price-image{
+  flex:1 1 45%;
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  min-height:360px;
+  background:#f7f7f7;
+}
+.price-image img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:opacity 0.8s ease-in-out;
+}
+.price-image img.active{
+  opacity:1;
+}
+
+/* Mobile adjustments */
+@media (max-width:768px){
+  .premium-price-section{
+    flex-direction:column;
+    padding:30px 15px;
+  }
+  .price-details, .price-item{text-align:center}
+  .price-item h3{
+    flex-direction:column;
+    gap:6px;
+    font-size:20px;
+    font-weight:700;
+  }
+  .price-item span{
+    display:block;
+    margin:6px 0;
+    font-size:18px;
+    color:var(--gold);
+  }
+  .price-item p{
+    margin:6px 0;
+    font-size:16px;
+    color:var(--muted);
+    line-height:1.6;
+  }
+  .book-btn{
+    position:static;
+    display:inline-block;
+    margin-top:12px;
+    opacity:1;
+    pointer-events:auto;
+    width:100%;
+    max-width:250px;
+    padding:10px 0;
+    font-size:16px;
+    border-radius:8px;
+    font-weight:600;
+  }
+  .price-image{
+    width:100%;
+    min-height:250px;
+    margin-top:25px;
+  }
+}
+
+/* Modal Base */
+.modal{
+  display:none;
+  position:fixed;
+  z-index:999;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0,0,0,0.4);
+  padding:0;
+  opacity:0;
+  transform:scale(0.95);
+  transition: all 0.3s ease;
+}
+.modal.show{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:1;
+  transform:scale(1);
+}
+
+/* Modal Content */
+.modal-content{
+  background:#fff;
+  border-radius:12px;
+  padding:20px 20px 25px;
+  width:90%;
+  max-width:360px;
+  position:relative;
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+  text-align:center;
+}
+
+/* Close Button */
+.close{
+  position:absolute;
+  right:15px;
+  top:15px;
+  font-size:22px;
+  font-weight:bold;
+  color:#555;
+  cursor:pointer;
+}
+.close:hover{color:#000;}
+
+/* Modal Heading */
+.modal-content h2{
+  margin:0 0 10px;
+  font-size:20px;
+  font-weight:700;
+  color:#111;
+}
+
+/* Selected Service Text */
+#selectedServiceText{
+  margin:0 0 15px;
+  font-size:14px;
+  color:#555;
+}
+
+/* Form Inputs */
+#bookingFormElement input{
+  width:100%;
+  padding:12px 10px;
+  margin-bottom:12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:14px;
+  outline:none;
+  transition: all 0.3s ease;
+}
+#bookingFormElement input:focus{
+  border-color:#000;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Submit Button */
+#bookingFormElement button{
+  width:100%;
+  padding:12px;
+  background:#000;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+  transition:all 0.3s ease;
+}
+#bookingFormElement button:hover{
+  background:#333;
+}
+</style>
+
+
+<section class="premium-price-section">
+  <div class="price-details">
+    <h2>Service Pricelist</h2>
+
+    <div class="price-item">
+      <h3>Style Director <span>₹1700</span></h3>
+      <p>Shampoo and condition with scalp massage, cut, finish and style.</p>
+      <button class="book-btn" type="button" onclick="openModal('Style Director')">Book Now</button>
+    </div>
+
+    <div class="price-item">
+      <h3>Creative Director <span>₹1350</span></h3>
+      <p>Pre-shave consultation, exfoliating facial scrub, soothing hot towels.</p>
+      <button class="book-btn" type="button" onclick="openModal('Creative Director')">Book Now</button>
+    </div>
+
+    <div class="price-item">
+      <h3>Top Stylist <span>₹900</span></h3>
+      <p>Style consultation, beard maintenance, shaping, tidying and finishing.</p>
+      <button class="book-btn" type="button" onclick="openModal('Top Stylist')">Book Now</button>
+    </div>
+
+    <div class="price-item">
+      <h3>Senior Stylist <span>₹700</span></h3>
+      <p>Style consultation, beard maintenance, shaping, tidying and finishing.</p>
+      <button class="book-btn" type="button" onclick="openModal('Senior Stylist')">Book Now</button>
+    </div>
+
+    <div class="price-item">
+      <h3>Stylist <span>₹600</span></h3>
+      <p>Style consultation, beard maintenance, shaping, tidying and finishing.</p>
+      <button class="book-btn" type="button" onclick="openModal('Stylist')">Book Now</button>
+    </div>
+  </div>
+
+  <div class="price-image" id="priceImage">
+    <img src="price-image.jpg" alt="Premium Service 1" class="active">
+    <img src="price-image2.jpg" alt="Premium Service 2">
+    <img src="price-image3.jpg" alt="Premium Service 3">
+  </div>
+</section>
+
+<!-- Modal Form -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Book Your Service</h2>
+    <p id="selectedServiceText">Selected: </p>
+    <form id="bookingFormElement">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="tel" name="phone" placeholder="Your phone number" required>
+      <input type="text" name="notes" placeholder="Preferred date/time or notes (optional)">
       <button type="submit">Send Request</button>
     </form>
   </div>
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const popup = document.getElementById('popupForm');
-  const selectedServiceText = document.getElementById('selectedService');
-  const serviceInput = document.getElementById('serviceInput');
-  const priceInput = document.getElementById('priceInput');
-  const closeBtn = document.querySelector('.close-popup');
-  const bookingForm = document.getElementById('bookingForm');
+/* Image Rotation */
+(function(){
+  const imgs = document.querySelectorAll('#priceImage img');
+  if(!imgs.length) return;
+  let idx = 0;
+  imgs[idx].classList.add('active');
+  if (imgs.length < 2) return;
+  setInterval(() => {
+    imgs[idx].classList.remove('active');
+    idx = (idx + 1) % imgs.length;
+    imgs[idx].classList.add('active');
+  }, 2000);
+})();
 
-  document.querySelectorAll('.book-btn').forEach(btn => {
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      const item = btn.closest('.gallery-item');
-      const service = item?.dataset.service || '';
-      const price = item?.dataset.price || '';
-      selectedServiceText.textContent = 'Selected: ' + service + ' : ' + price;
-      serviceInput.value = service;
-      priceInput.value = price;
-      popup.style.display = 'flex';
-      popup.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-      setTimeout(()=> document.getElementById('customerName').focus(), 120);
-    });
-  });
+/* Modal Functions */
+const modal = document.getElementById('bookingModal');
+const selectedText = document.getElementById('selectedServiceText');
 
-  function closePopup() {
-    popup.style.display = 'none';
-    popup.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
+function openModal(service){
+  selectedText.textContent = `Selected: ${service}`;
+  modal.classList.add('show');
+}
 
-  closeBtn.addEventListener('click', closePopup);
-  popup.addEventListener('click', function (e) { if (e.target === popup) closePopup(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && popup.style.display === 'flex') closePopup(); });
+function closeModal(){
+  modal.classList.remove('show');
+}
+window.onclick = function(event){
+  if(event.target == modal){ closeModal(); }
+}
 
-  // WhatsApp Integration on Form Submit
-  bookingForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const name = document.getElementById('customerName').value.trim();
-    const phone = document.getElementById('customerPhone').value.trim();
-    const message = document.getElementById('customerMessage').value.trim();
-    const service = document.getElementById('serviceInput').value;
-    const price = document.getElementById('priceInput').value;
-
-    const whatsappNumber = "919030015757"; // 91 + your number
-    const whatsappMessage =
-      `New Booking Request:%0A` +
-      `Name: ${encodeURIComponent(name)}%0A` +
-      `Phone: ${encodeURIComponent(phone)}%0A` +
-      `Service: ${encodeURIComponent(service)}%0A` +
-      `Price: ${encodeURIComponent(price)}%0A` +
-      `Message: ${encodeURIComponent(message)}`;
-
-    window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
-    closePopup();
-  });
+/* WhatsApp Booking Submission */
+document.getElementById('bookingFormElement').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = this.name.value.trim();
+  const phone = this.phone.value.trim();
+  const notes = this.notes.value.trim();
+  const service = selectedText.textContent.replace('Selected: ', '');
+  if(!name || !phone) return alert('Please fill all required fields.');
+  
+  const message = `New Booking Request:%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0ANotes: ${notes}`;
+  const whatsappURL = `https://wa.me/919030015757?text=${message}`;
+  window.open(whatsappURL, '_blank');
+  closeModal();
 });
 </script>
 
 
 
 
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Contact Section</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
   <style>
     html {
       scroll-behavior: smooth;
@@ -565,7 +869,7 @@ document.addEventListener('DOMContentLoaded', function () {
     /* 🌐 CONTACT SECTION */
     .contact-section-white {
       background: #fff;
-      padding: 70px 20px;
+      padding: 80px 20px;
     }
 
     .contact-container {
@@ -578,16 +882,23 @@ document.addEventListener('DOMContentLoaded', function () {
       align-items: center;
     }
 
+    /* ✨ Luxury Glassmorphism Card */
     .contact-card {
       flex: 1 1 46%;
-      background: rgba(0, 0, 0, 0.03);
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      border-radius: 14px;
-      padding: 35px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
       opacity: 0;
       transform: translateY(60px);
-      transition: all 0.6s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
     }
 
     .contact-card.visible {
@@ -597,21 +908,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     .contact-card h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      margin-bottom: 12px;
+      font-size: 32px;
+      margin-bottom: 15px;
       color: #111;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
 
     .subtext {
-      font-size: 14px;
+      font-size: 15px;
       color: #555;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+      line-height: 1.6;
     }
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 20px;
     }
 
     .input-wrapper {
@@ -621,12 +934,19 @@ document.addEventListener('DOMContentLoaded', function () {
     .input-wrapper input,
     .input-wrapper textarea {
       width: 100%;
-      padding: 12px 14px;
-      background: #f8f8f8;
-      border: 1px solid #ddd;
-      border-radius: 8px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 12px;
       font-size: 14px;
       color: #111;
+      transition: all 0.3s ease;
+    }
+
+    .input-wrapper input:focus,
+    .input-wrapper textarea:focus {
+      border: 1px solid #000;
+      background: rgba(255,255,255,0.3);
     }
 
     .input-wrapper input::placeholder,
@@ -637,86 +957,70 @@ document.addEventListener('DOMContentLoaded', function () {
     .input-wrapper label {
       position: absolute;
       top: 50%;
-      left: 14px;
+      left: 16px;
       transform: translateY(-50%);
       color: #888;
       font-size: 13px;
       transition: all 0.3s;
       pointer-events: none;
-      background: #f8f8f8;
-      padding: 0 4px;
+      background: rgba(255,255,255,0.1);
+      padding: 0 5px;
+      border-radius: 4px;
     }
 
     .input-wrapper input:focus + label,
     .input-wrapper input:not(:placeholder-shown) + label,
     .input-wrapper textarea:focus + label,
     .input-wrapper textarea:not(:placeholder-shown) + label {
-      top: -8px;
-      left: 10px;
+      top: -10px;
+      left: 12px;
       font-size: 11px;
       color: #000;
+      background: rgba(255,255,255,0.2);
     }
 
     form button {
-      background: #000;
+      background: #111;
       color: #fff;
-      padding: 12px;
+      padding: 14px;
       font-size: 14px;
       font-weight: 600;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
     form button:hover {
       background: #222;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
     }
 
-    .image-block {
+    /* ✨ Map Block with Neon Glow */
+    .map-block {
       padding: 0;
+      height: 450px;
+      border-radius: 20px;
       overflow: hidden;
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      box-shadow: 0 0 25px rgba(0,0,0,0.1), 0 0 10px rgba(0,0,0,0.05) inset;
+      border: 1px solid rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
     }
 
-    .image-block img {
+    .map-block iframe {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      border-radius: 14px;
-      transition: transform 0.4s ease;
+      border: 0;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.15) inset;
+      transition: all 0.3s ease;
     }
 
-    .image-block:hover img {
-      transform: scale(1.03);
-    }
-
-    .image-overlay {
-      position: absolute;
-      top: 0;
-      left: -80%;
-      width: 40%;
-      height: 100%;
-      background: linear-gradient(120deg, rgba(255, 255, 255, 0.15) 0%, transparent 100%);
-      transform: skewX(-20deg);
-      animation: shine 3s infinite;
-    }
-
-    @keyframes shine {
-      0% {
-        left: -80%;
-      }
-
-      50% {
-        left: 120%;
-      }
-
-      100% {
-        left: 120%;
-      }
+    .map-block:hover iframe {
+      box-shadow: 0 0 25px rgba(0,255,255,0.25) inset;
+      transform: scale(1.02);
     }
 
     /* 📱 MOBILE RESPONSIVE */
@@ -730,12 +1034,13 @@ document.addEventListener('DOMContentLoaded', function () {
         padding: 30px;
       }
 
-      .image-block img {
+      .map-block {
         height: 300px;
       }
     }
   </style>
-
+</head>
+<body>
 
   <!-- 🌐 CONTACT SECTION -->
   <section id="locate" class="contact-section-white">
@@ -744,7 +1049,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <!-- Contact Form -->
       <div class="contact-card animate-fade-up">
         <h2><i class="fas fa-paper-plane"></i> Let’s Connect</h2>
-        <p class="subtext">Have a question or ready to book? Our team will respond promptly.</p>
+        <p class="subtext">Have a question or ready to book? Our expert stylists are ready to create your perfect look. Reach out and experience world-class service today.</p>
 
         <form id="premiumContactForm" autocomplete="off">
           <div class="input-wrapper">
@@ -767,10 +1072,14 @@ document.addEventListener('DOMContentLoaded', function () {
         </form>
       </div>
 
-      <!-- Image Block -->
-      <div class="contact-card image-block animate-fade-up">
-        <div class="image-overlay"></div>
-        <img src="your-image.webp" alt="Toni&Guy Studio" />
+      <!-- Google Map Block -->
+      <div class="contact-card map-block animate-fade-up">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.795496433747!2d78.42383267594913!3d17.44755520316776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb937e96d22f07%3A0x3a9e18798f7e5d03!2sToni%20%26%20Guy%20Tellapur!5e0!3m2!1sen!2sin!4v1691970000000!5m2!1sen!2sin"
+          allowfullscreen="" 
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
 
     </div>
@@ -794,6 +1103,8 @@ document.addEventListener('DOMContentLoaded', function () {
     animated.forEach(el => io.observe(el));
   </script>
 
+</body>
+</html>
 
 
 
@@ -839,7 +1150,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <style>
   .tg-footer {
     position: relative;
-    background: url('footer-bg.jpg') center center/cover no-repeat;
+    background: url('footer-bg.webp') center center/cover no-repeat;
     padding: 100px 20px 70px;
     font-family: 'Open Sans', sans-serif;
     overflow: hidden;
@@ -1004,7 +1315,7 @@ document.addEventListener('DOMContentLoaded', function () {
     .tg-footer-left p,
     .tg-footer-left a {
       font-size: 14px;
-      flex-direction: row !important; /* ✅ Keep icon and text in one row */
+      flex-direction: row !important;
       gap: 8px;
       justify-content: center;
       align-items: center;
