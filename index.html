@@ -13,6 +13,7 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -45,13 +46,16 @@
     <a href="https://www.facebook.com/p/Toniguy-Tellapur-61574831822244/" target="_blank"><i class="fab fa-facebook-f"></i></a>
     <a href="mailto:info@toniandguytellapur.com"><i class="fas fa-envelope"></i></a>
   </div>
-  <div class="location">TELLAPUR, HYDERABAD</div>
+  <div class="location">
+    <a href="https://share.google/jpfjXfH7pAUtCbWcY" target="_blank"> TELLAPUR, HYDERABAD
+    </a>
+</div>
 </div>
 
 <!-- Navigation -->
 <div class="navbar-custom">
-  <div class="logo">
-    <img src="Logo.jpg" alt="TONI&GUY" />
+  <div class="logo" onclick="scrollToTop()" style="cursor: pointer;">
+    <img src="Logo.jpg" alt="TONI&GUY" /> 
   </div>
   <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
   <nav id="navLinks">
@@ -63,49 +67,60 @@
   </nav>
 </div>
 
+
+
 <!-- Hero Slider -->
 <section id="heroSection">
   <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
     <div class="carousel-inner">
 
       <!-- Slides -->
-      <div class="carousel-item active" style="background-image: url('hero1z.webp');">
+      <div class="carousel-item active" style="background-image: url('hero1.png');">
         <div class="hero-overlay"></div>
         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-          <h1 class="animate__animated animate__fadeInDown">Welcome to Toni & Guy Tellapur</h1>
-          <p class="animate__animated animate__fadeInUp">A Luxury Salon Experience from London</p>
+          <h1 class="animate__animated animate__fadeInDown">Welcome to<br> Toni & Guy Tellapur</h1>
+          <p class="animate__animated animate__fadeInUp">Step into style & luxury like never before!</p>
         </div>
       </div>
 
       <div class="carousel-item" style="background-image: url('hero2.webp');">
         <div class="hero-overlay"></div>
         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-          <h1 class="animate__animated animate__fadeInDown">Step into Style</h1>
-          <p class="animate__animated animate__fadeInUp">World-Class Haircuts & Glossy Hair Now in Tellapur</p>
+          <h1 class="animate__animated animate__fadeInDown">Hair Colour</h1>
+          <p class="animate__animated animate__fadeInUp">Transform your look with expert hair colouring Vibrant, trendy & flawless shades tailored for you!</p>
         </div>
       </div>
 
       <div class="carousel-item" style="background-image: url('hero3.webp');">
         <div class="hero-overlay"></div>
         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-          <h1 class="animate__animated animate__fadeInDown">Toni&Guy Touch to Your Hair</h1>
-          <p class="animate__animated animate__fadeInUp">Global Styles, Local Presence! Experience the Elite Haircare</p>
+          <h1 class="animate__animated animate__fadeInDown">Keratin</h1>
+          <p class="animate__animated animate__fadeInUp">Say goodbye to frizz! Smooth, shiny & manageable hair with our premium Keratin treatment!</p>
         </div>
       </div>
 
       <div class="carousel-item" style="background-image: url('hero4.webp');">
         <div class="hero-overlay"></div>
         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-          <h1 class="animate__animated animate__fadeInDown">Bridal Beauty Perfected</h1>
-          <p class="animate__animated animate__fadeInUp">Book Your Premium Wedding Consultation Today</p>
+          <h1 class="animate__animated animate__fadeInDown">Pedi & Mani</h1>
+          <p class="animate__animated animate__fadeInUp">Relax & refresh with our luxury pedicure & manicure services, because your hands & feet deserve care too!</p>
         </div>
       </div>
 
-      <div class="carousel-item" style="background-image: url('hero5.webp');">
+      </div>
+          <div class="carousel-item" style="background-image: url('hero5.webp');">
         <div class="hero-overlay"></div>
         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-          <h1 class="animate__animated animate__fadeInDown">Exclusive Offers Await</h1>
-          <p class="animate__animated animate__fadeInUp">Unwind in Luxury with Limited-Time Packages</p>
+          <h1 class="animate__animated animate__fadeInDown">Bridal Makeup</h1>
+          <p class="animate__animated animate__fadeInUp">Walk down the aisle with confidence, our bridal makeup experts make your big day truly unforgettable!</p>
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('hero6.webp');">
+        <div class="hero-overlay"></div>
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+          <h1 class="animate__animated animate__fadeInDown">Facial</h1>
+          <p class="animate__animated animate__fadeInUp">Glow like never before! Indulge in rejuvenating facials for radiant & flawless skin!</p>
         </div>
       </div>
     </div>
@@ -124,28 +139,34 @@
 
 
 
-  <section id="about" class="brand-section">
-    <div class="brand-container">
-      <!-- Text Content -->
-      <div class="brand-text">
-        <h2>Step into the World of Toni & Guy. Now in Tellapur, Hyderabad</h2>
-        <p>
-          We bring world-class hairdressing and beauty services to your neighborhood with the finesse and quality Toni&Guy is known for globally.
-          From haircuts to hair colour, smoothing to bridal services, every detail is delivered with expertise and care.
-        </p>
-        <p class="highlight">We’re not just a salon! We’re an experience.</p>
-        <p>
-          Our mission is to make every client walk out feeling 
-          confident, rejuvenated and looking their absolute best.
-        </p>
-      </div>
 
-      <!-- Visual Side -->
-      <div class="brand-visual" id="visualImg">
-        <img src="brand-bg.gif" alt="Brand Visual" />
-      </div>
+<section id="about" class="brand-section">
+  <div class="brand-container">
+    <!-- Text Content -->
+    <div class="brand-text">
+      <h2>Step into the World of Toni & Guy. Now in Tellapur, Hyderabad</h2>
+      <p>
+        We bring world-class hairdressing and beauty services to your neighborhood with the finesse and quality Toni&Guy is known for globally.
+        From haircuts to hair colour, smoothing to bridal services, every detail is delivered with expertise and care.
+      </p>
+      <p class="highlight">We’re not just a salon! We’re an experience.</p>
+      <p>
+        Our mission is to make every client walk out feeling 
+        confident, rejuvenated and looking their absolute best.
+      </p>
+
+      <!-- ✅ Book Now Button (WhatsApp) -->
+         <a class="bridal-btn" href="https://wa.me/919030015757?text=Interested%20in%20Gold%20Membership" target="_blank" rel="noopener" aria-label="Book now on WhatsApp">
+          BOOK NOW
+        </a>
     </div>
-  </section>
+
+    <!-- Visual Side -->
+    <div class="brand-visual" id="visualImg">
+      <img src="brand-bg.gif" alt="Brand Visual" />
+    </div>
+  </div>
+</section>
 
 
 
@@ -211,10 +232,6 @@
 </section>
 
 
-
-
-
-
 <!-- ⭐ BRIDAL BEAUTY SECTION -->
   <section id="bridal" class="bridal-section">
     <div class="bridal-container">
@@ -271,16 +288,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-<!-- 🌟 PREMIUM GALLERY SECTION WITH CUSTOM FONT -->
 <style>
 /* ---------- CUSTOM FONT ---------- */
 @font-face {
@@ -309,17 +316,20 @@
   text-align: center;
   margin-bottom: 50px;
 }
+
 .gallery-header h2 {
-  font-family: 'CustomFont', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 36px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 30px;
 }
+
 .gallery-header p {
-  font-size: 16px;
-  color: var(--muted);
-  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 20px;
 }
 
 /* ---------- GRID ---------- */
@@ -476,13 +486,6 @@
 
 
 
-
-
-
-
-
-
-
 <style>
 :root{
   --gold:#d4af37;
@@ -514,13 +517,14 @@ body{
 .price-details{
   flex:1 1 45%;
 }
-.price-details h2{
-  font-size:28px;
-  margin:0 0 30px;
-  font-weight:700;
+
+.price-details h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
   border-bottom:2px solid var(--gold);
-  display:inline-block;
-  padding-bottom:6px;
+  color: #000;
+  margin-bottom: 30px;
 }
 
 .price-item{
@@ -846,14 +850,6 @@ document.getElementById('bookingFormElement').addEventListener('submit', functio
 
 
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luxury Contact Section</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
   <style>
     html {
       scroll-behavior: smooth;
@@ -1039,8 +1035,7 @@ document.getElementById('bookingFormElement').addEventListener('submit', functio
       }
     }
   </style>
-</head>
-<body>
+
 
   <!-- 🌐 CONTACT SECTION -->
   <section id="locate" class="contact-section-white">
@@ -1071,17 +1066,18 @@ document.getElementById('bookingFormElement').addEventListener('submit', functio
           <button type="submit">Send Message</button>
         </form>
       </div>
-
       <!-- Google Map Block -->
-      <div class="contact-card map-block animate-fade-up">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.795496433747!2d78.42383267594913!3d17.44755520316776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb937e96d22f07%3A0x3a9e18798f7e5d03!2sToni%20%26%20Guy%20Tellapur!5e0!3m2!1sen!2sin!4v1691970000000!5m2!1sen!2sin"
-          allowfullscreen="" 
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-
+       <div class="contact-card map-block animate-fade-up">
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2489427778714!2d78.27922227498675!3d17.44779508344969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbedece88f17b1%3A0xd28cc3d6e7e3d2a4!2sToni%26Guy%20Tellapur!5e0!3m2!1sen!2sin!4v1756116719389!5m2!1sen!2sin" 
+        width="100%" 
+        height="450" 
+        style="border:0; border-radius: 12px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
     </div>
   </section>
 
@@ -1103,16 +1099,6 @@ document.getElementById('bookingFormElement').addEventListener('submit', functio
     animated.forEach(el => io.observe(el));
   </script>
 
-</body>
-</html>
-
-
-
-
-
-
-
-
 
 <!-- 🌐 LUXURY FOOTER SECTION -->
 <footer class="tg-footer" id="tgFooter">
@@ -1125,7 +1111,7 @@ document.getElementById('bookingFormElement').addEventListener('submit', functio
       <p><i class="fas fa-map-marker-alt"></i> <a href="https://share.google/ALayEatBJR5xuYXa4" target="_blank">Tellapur, Hyderabad</a></p>
       <p><i class="fa-solid fa-phone"></i> <a href="tel:+919030015757">+91 90300 15757</a></p>
       <p><i class="fas fa-envelope"></i> <a href="mailto:tellapur@toniandguy.in">tellapur@toniandguy.in</a></p>
-      <p><i class="fas fa-clock"></i> 10:00 AM – 09:00 PM (All Days)</p>
+      <p><i class="fas fa-clock"></i> 09:00 AM – 09:00 PM (All Days)</p>
     </div>
 
     <!-- Right -->
@@ -1141,9 +1127,6 @@ document.getElementById('bookingFormElement').addEventListener('submit', functio
 
   </div>
 
-  <button id="scrollTopBtn" onclick="scrollToTop()" title="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
 </footer>
 
 <!-- 🌟 FOOTER STYLE -->
@@ -1530,11 +1513,6 @@ document.getElementById('bookingFormElement').addEventListener('submit', functio
 
 
 
-
-
-
-
-
 <!-- ✅ WHATSAPP BUTTON: PULSE AFTER LANDING -->
 <a href="https://wa.me/919030015757" target="_blank" id="whatsappButton" class="whatsapp-float-left">
   <i class="fab fa-whatsapp"></i>
@@ -1618,11 +1596,6 @@ document.getElementById('bookingFormElement').addEventListener('submit', functio
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 
-
-
-
-
-
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -1631,11 +1604,8 @@ document.getElementById('bookingFormElement').addEventListener('submit', functio
 <script src="expertise.js"></script>
   <script src="script.js"></script>
 
-
  <!-- External CSS -->
   <link rel="stylesheet" href="bridal.css">
-
-
 
 </body>
 </html>
