@@ -8,12 +8,12 @@
   <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="image/x-icon" />
 
-  <!-- Google Fonts: Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Futura:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,19 +24,120 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Apply Montserrat to entire site -->
-  <style>
-    html, body {
-      font-family: 'Montserrat', sans-serif;
-    }
-    * {
-      font-family: inherit;
-    }
-  </style>
-
+  
 </head>
 
 <body>
+
+ <style>
+    /* RESET */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Futura', 'Open Sans', sans-serif; background-color: #fff; color: #000; }
+
+    /* HERO base (desktop unchanged) */
+    #heroSection {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .carousel-item {
+      position: relative;
+      height: 100vh;
+      min-height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .hero-overlay { display: none !important; }
+
+    /* Desktop caption */
+    .carousel-caption {
+      top: 50%;
+      left: 80%;
+      transform: translate(-50%, -50%);
+      bottom: auto;
+      right: auto;
+      text-align: center;
+      color: #000;
+      width: 90%;
+      max-width: 600px;
+      position: absolute;
+      z-index: 5;
+    }
+    .carousel-caption h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      text-shadow: 0px 2px 8px rgba(0,0,0,0.4);
+    }
+    .carousel-caption p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      font-weight: 400;
+      text-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+    }
+
+    /* Controls */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 50%;
+      background-size: 40px 40px;
+      transition: background-color 0.3s ease;
+    }
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    /* MOBILE: image top (75vh), caption bottom (25vh), image left aligned */
+    @media (max-width: 768px) {
+      #heroSection { height: auto; min-height: 90vh; }
+      #heroCarousel, .carousel-inner { height: auto; }
+      .carousel-item { background: none !important; min-height: 0; }
+      .carousel-item::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 65vh;
+        background-image: var(--bg);
+        background-size: cover;
+        background-position: left center;
+        background-repeat: no-repeat;
+        z-index: 0;
+      }
+      .carousel-caption {
+        position: static !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 25vh;
+        padding: 14px 20px;
+        margin: 0;
+        background: #fff;
+        color: #000;
+        text-align: center;
+        z-index: 1;
+        box-shadow: 0 -1px 10px rgba(0,0,0,0.03);
+        transform: none;
+      }
+      .carousel-caption h1 {
+        font-size: clamp(20px, 6vw, 28px);
+        margin: 0 0 8px;
+        line-height: 1.2;
+        text-shadow: none;
+      }
+      .carousel-caption p {
+        font-size: clamp(12px, 4vw, 16px);
+        margin: 0;
+        text-shadow: none;
+      }
+    }
+  </style>
+
 
 <!-- Top Bar -->
 <div class="top-bar">
@@ -47,9 +148,8 @@
     <a href="mailto:info@toniandguytellapur.com"><i class="fas fa-envelope"></i></a>
   </div>
   <div class="location">
-    <a href="https://share.google/jpfjXfH7pAUtCbWcY" target="_blank"> TELLAPUR, HYDERABAD
-    </a>
-</div>
+    <a href="https://share.google/jpfjXfH7pAUtCbWcY" target="_blank"> TELLAPUR, HYDERABAD </a>
+  </div>
 </div>
 
 <!-- Navigation -->
@@ -67,75 +167,69 @@
   </nav>
 </div>
 
-
-
 <!-- Hero Slider -->
 <section id="heroSection">
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
     <div class="carousel-inner">
 
-      <!-- Slides -->
-      <div class="carousel-item active" style="background-image: url('heros1.png');">
-        <div class="hero-overlay"></div>
-        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-          <h1 class="animate__animated animate__fadeInDown">Welcome to<br> Toni & Guy Tellapur</h1>
-          <p class="animate__animated animate__fadeInUp">Step into style & luxury like never before!</p>
+      <!-- Slide 1 -->
+      <div class="carousel-item active" style="--bg: url('hero1.jpg'); background-image: url('heros1.webp');">
+        <div class="carousel-caption">
+          <h1 class="animate__animated animate__fadeInDown">Welcome to<br> TONI &amp; GUY TELLAPUR</h1>
+          <p class="animate__animated animate__fadeInUp">Step into style &amp; luxury like never before!</p>
         </div>
       </div>
 
-      <div class="carousel-item" style="background-image: url('heros2.webp');">
-        <div class="hero-overlay"></div>
-        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-          <h1 class="animate__animated animate__fadeInDown">Hair Colour</h1>
-          <p class="animate__animated animate__fadeInUp">Transform your look with expert hair colouring Vibrant, trendy & flawless shades tailored for you!</p>
+      <!-- Slide 2 -->
+      <div class="carousel-item" style="--bg: url('hero2.jpg'); background-image: url('heros2.webp');">
+        <div class="carousel-caption">
+          <h1 class="animate__animated animate__fadeInDown">HAIR COLOUR</h1>
+          <p class="animate__animated animate__fadeInUp">Transform your look with vibrant, trendy &amp; flawless shades tailored for you!</p>
         </div>
       </div>
 
-      <div class="carousel-item" style="background-image: url('heros3.webp');">
-        <div class="hero-overlay"></div>
-        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-          <h1 class="animate__animated animate__fadeInDown">Keratin</h1>
-          <p class="animate__animated animate__fadeInUp">Say goodbye to frizz! Smooth, shiny & manageable hair with our premium Keratin treatment!</p>
+      <!-- Slide 3 -->
+      <div class="carousel-item" style="--bg: url('hero3.webp'); background-image: url('heros3.webp');">
+        <div class="carousel-caption">
+          <h1 class="animate__animated animate__fadeInDown">KERATIN</h1>
+          <p class="animate__animated animate__fadeInUp">Say goodbye to frizz! Smooth, shiny &amp; manageable hair with our premium Keratin treatment!</p>
         </div>
       </div>
 
-      <div class="carousel-item" style="background-image: url('heros4.webp');">
-        <div class="hero-overlay"></div>
-        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-          <h1 class="animate__animated animate__fadeInDown">Pedi & Mani</h1>
-          <p class="animate__animated animate__fadeInUp">Relax & refresh with our luxury pedicure & manicure services, because your hands & feet deserve care too!</p>
+      <!-- Slide 4 -->
+      <div class="carousel-item" style="--bg: url('heros4.png'); background-image: url('heros4.webp');">
+        <div class="carousel-caption">
+          <h1 class="animate__animated animate__fadeInDown">PEDI &amp; MANI</h1>
+          <p class="animate__animated animate__fadeInUp">Relax &amp; refresh with our luxury pedicure &amp; manicure services.</p>
         </div>
       </div>
 
-      </div>
-          <div class="carousel-item" style="background-image: url('heros5.webp');">
-        <div class="hero-overlay"></div>
-        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-          <h1 class="animate__animated animate__fadeInDown">Bridal Makeup</h1>
-          <p class="animate__animated animate__fadeInUp">Walk down the aisle with confidence, our bridal makeup experts make your big day truly unforgettable!</p>
+      <!-- Slide 5 -->
+      <div class="carousel-item" style="--bg: url('heros5.png'); background-image: url('heros5.webp');">
+        <div class="carousel-caption">
+          <h1 class="animate__animated animate__fadeInDown">BRIDAL MAKEUP</h1>
+          <p class="animate__animated animate__fadeInUp">Walk down the aisle with confidence – unforgettable bridal beauty!</p>
         </div>
       </div>
 
-      <div class="carousel-item" style="background-image: url('heros6.webp');">
-        <div class="hero-overlay"></div>
-        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-          <h1 class="animate__animated animate__fadeInDown">Facial</h1>
-          <p class="animate__animated animate__fadeInUp">Glow like never before! Indulge in rejuvenating facials for radiant & flawless skin!</p>
+      <!-- Slide 6 -->
+      <div class="carousel-item" style="--bg: url('heros6.webp'); background-image: url('heros6.webp');">
+        <div class="carousel-caption">
+          <h1 class="animate__animated animate__fadeInDown">FACIAL</h1>
+          <p class="animate__animated animate__fadeInUp">Glow like never before! Rejuvenating facials for radiant &amp; flawless skin.</p>
         </div>
       </div>
+
     </div>
-
-    <!-- Arrows -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 </section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
 
 
 
