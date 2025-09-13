@@ -1,4 +1,4 @@
-/* RESET */
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +15,6 @@ body {
   color: #000;
 }
 
-/* ========== TOP BAR ========== */
 .top-bar {
   background-color: #000;
   color: #fff;
@@ -43,7 +42,6 @@ body {
   white-space: nowrap;
 }
 
-/* ========== NAVBAR ========== */
 .navbar-custom {
   background-color: #fff;
   border-bottom: 1px solid #eee;
@@ -95,7 +93,6 @@ body {
   display: none !important; 
 }
 
-/* Text inside hero slides */
 .carousel-caption {
   top: 50%;
   left: 80%;
@@ -119,7 +116,6 @@ body {
   text-shadow: 0px 2px 6px rgba(0,0,0,0.3);
 }
 
-/* ========== CAROUSEL CONTROLS ========== */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: rgba(0, 0, 0, 0.4);
@@ -133,7 +129,6 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .top-bar {
     flex-direction: row;
@@ -179,7 +174,6 @@ body {
     height: 48px;
   }
 
-  /* Mobile hero text */
   .carousel-caption h1 {
     font-size: 2rem;
   }

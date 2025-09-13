@@ -112,7 +112,6 @@
     background-color: rgba(0, 0, 0, 0.7);
   }
 
-  /* MOBILE: image top (75vh), caption bottom (25vh), image left aligned */
   @media (max-width: 768px) {
     #heroSection { height: auto; min-height: 90vh; }
     #heroCarousel, .carousel-inner { height: auto; }
@@ -197,7 +196,7 @@
   <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
     <div class="carousel-inner">
       <!-- Slide 1 -->
-      <div class="carousel-item active" style="--bg: url('hero1.jpg'); background-image: url('heros1.webp');">
+      <div class="carousel-item active" style="--bg: url('hero.jpg'); background-image: url('heros1.webp');">
         <div class="carousel-caption">
           <h1 class="animate__animated animate__fadeInDown">Welcome to<br> TONI &amp; GUY TELLAPUR</h1>
           <p class="animate__animated animate__fadeInUp">Step into style &amp; luxury like never before!</p>
@@ -296,7 +295,7 @@
       </div>
     </div>
 
-    <div class="category-panel" data-bg="special.jpeg">
+    <div class="category-panel" data-bg="special.webp">
       <div class="overlay">
         <h3>Special Offers</h3>
         <div class="hover-info">
@@ -477,8 +476,6 @@ document.querySelectorAll(".category-panel").forEach(panel => {
 
 
 
-
-
 <!-- ⭐ BRIDAL BEAUTY SECTION -->
 <section id="bridal" class="bridal-section">
   <div class="bridal-container">
@@ -486,11 +483,11 @@ document.querySelectorAll(".category-panel").forEach(panel => {
     <!-- Image Slider -->
     <div class="bridal-slider-wrapper">
       <div class="bridal-image-slider" id="bridalSlider">
-        <img src="heros5.png" alt="Bridal Look 1" class="active" />
+        <img src="bridal1.webp" alt="Bridal Look 1" class="active" />
         <img src="bridal2.webp" alt="Bridal Look 2" />
         <img src="bridal3.webp" alt="Bridal Look 3" />
         <img src="bridal4.webp" alt="Bridal Look 4" />
-        <img src="bridal5.webp" alt="Bridal Look 5" />
+        <img src="Bridal5.webp" alt="Bridal Look 5" />
       </div>
     </div>
 
@@ -498,7 +495,7 @@ document.querySelectorAll(".category-panel").forEach(panel => {
     <div class="bridal-content">
       <h2>Bridal Beauty Perfected</h2>
       <p>
-        Book your wedding consultation today and let our international stylists craft your dream bridal look — 
+        Book your wedding consultation today and let our international stylists craft your dream bridal look
         from elegant updos and flawless makeup to radiant hair treatments tailored just for you.
       </p>
       <a class="bridal-btn" href="https://wa.me/919030015757?text=Interested%20in%20Gold%20Membership" 
@@ -536,7 +533,7 @@ document.querySelectorAll(".category-panel").forEach(panel => {
 
 
 <style>
-/* ---------- CUSTOM FONT ---------- */
+
 @font-face {
   font-family: 'CustomFont';
   src: url('/mnt/data/395cb305-7c9d-4921-9480-24be640b7241.png') format('truetype'); /* replace if actual font file is .ttf or .woff */
@@ -544,7 +541,6 @@ document.querySelectorAll(".category-panel").forEach(panel => {
   font-style: normal;
 }
 
-/* ---------- VARIABLES ---------- */
 :root {
   --bg: #fff;
   --text:#111;
