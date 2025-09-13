@@ -390,7 +390,6 @@ body {
 
 
 
-
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -404,7 +403,7 @@ body {
   line-height: 1.6;
 }
 
-/* Bridal Section */
+/* --- Bridal Section --- */
 .bridal-section {
   width: 100%;
   background-color: #f9f9f9;
@@ -428,10 +427,8 @@ body {
   overflow: hidden;
   border-radius: 12px;
   background: #eee;
-
-  /* ✅ Fixed aspect ratio for consistency */
-  aspect-ratio: 4 / 3; /* Change to 3/2 or 16/9 if you prefer */
-  min-height: 480px; /* Ensures stable height on desktop */
+  aspect-ratio: 4 / 3; /* Keeps a stable shape */
+  min-height: 480px;
 }
 
 .bridal-image-slider {
@@ -449,9 +446,9 @@ body {
   object-fit: cover;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  will-change: opacity;
   border-radius: 12px;
 }
+
 .bridal-image-slider img.active {
   opacity: 1;
   z-index: 2;
@@ -474,8 +471,8 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
   font-weight: 700;
-  color: #000;
   margin-bottom: 18px;
+  color: #000;
 }
 
 .bridal-content p {
@@ -496,6 +493,7 @@ body {
   border-radius: 4px;
   transition: background-color .25s ease, transform .12s ease;
 }
+
 .bridal-btn:hover,
 .bridal-btn:focus {
   background-color: #222;
@@ -503,7 +501,7 @@ body {
   outline: none;
 }
 
-/* --- Responsive tweaks --- */
+/* --- Responsive Tweaks --- */
 @media (max-width: 992px) {
   .bridal-container {
     flex-direction: column;
@@ -514,7 +512,7 @@ body {
   .bridal-slider-wrapper {
     order: 1;
     width: 100%;
-    aspect-ratio: 4 / 3; /* ✅ Keeps same shape on tablets */
+    aspect-ratio: 4 / 3;
     min-height: auto;
     border-radius: 10px;
   }
@@ -548,9 +546,7 @@ body {
   }
 
   .bridal-slider-wrapper {
-    aspect-ratio: 4 / 3; /* ✅ Keeps same shape on phones */
-    min-height: auto;
-    max-height: none;
+    aspect-ratio: 4 / 3;
     border-radius: 8px;
   }
 
@@ -568,11 +564,13 @@ body {
   }
 }
 
-/* Accessibility: show first image if JS disabled */
-.no-js .bridal-image-slider img { opacity: 0; }
-.no-js .bridal-image-slider img:first-child { opacity: 1; }
-
-
+/* Fallback if JS is disabled */
+.no-js .bridal-image-slider img {
+  opacity: 0;
+}
+.no-js .bridal-image-slider img:first-child {
+  opacity: 1;
+}
 
 
 
