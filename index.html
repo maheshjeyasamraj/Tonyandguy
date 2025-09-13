@@ -29,115 +29,140 @@
 
 <body>
 
- <style>
-    /* RESET */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Futura', 'Open Sans', sans-serif; background-color: #fff; color: #000; }
+<style>
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Futura', 'Open Sans', sans-serif; background-color: #fff; color: #000; }
 
-    /* HERO base (desktop unchanged) */
-    #heroSection {
-      position: relative;
+
+  #heroSection {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .carousel-item {
+    position: relative;
+    height: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .hero-overlay { display: none !important; }
+
+  /* Desktop caption */
+  .carousel-caption {
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+    right: auto;
+    text-align: center;
+    color: #000;
+    width: 90%;
+    max-width: 600px;
+    position: absolute;
+    z-index: 5;
+  }
+  .carousel-caption h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-shadow: 0px 2px 8px rgba(0,0,0,0.4);
+  }
+  .carousel-caption p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: 400;
+    text-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+  }
+
+  /* Explore Button */
+  .explore-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: #000;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: 2px solid #000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  .explore-btn:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.05);
+  }
+
+  /* Controls */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 50%;
+    background-size: 40px 40px;
+    transition: background-color 0.3s ease;
+  }
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  /* MOBILE: image top (75vh), caption bottom (25vh), image left aligned */
+  @media (max-width: 768px) {
+    #heroSection { height: auto; min-height: 90vh; }
+    #heroCarousel, .carousel-inner { height: auto; }
+    .carousel-item { background: none !important; min-height: 0; }
+    .carousel-item::before {
+      content: "";
+      display: block;
       width: 100%;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .carousel-item {
-      position: relative;
-      height: 100vh;
-      min-height: 100vh;
+      height: 65vh;
+      background-image: var(--bg);
       background-size: cover;
-      background-position: center;
+      background-position: left center;
       background-repeat: no-repeat;
+      z-index: 0;
     }
-    .hero-overlay { display: none !important; }
-
-    /* Desktop caption */
     .carousel-caption {
-      top: 50%;
-      left: 80%;
-      transform: translate(-50%, -50%);
-      bottom: auto;
-      right: auto;
-      text-align: center;
+      position: static !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 25vh;
+      padding: 14px 20px;
+      margin: 0;
+      background: #fff;
       color: #000;
-      width: 90%;
-      max-width: 600px;
-      position: absolute;
-      z-index: 5;
+      text-align: center;
+      z-index: 1;
+      box-shadow: 0 -1px 10px rgba(0,0,0,0.03);
+      transform: none;
     }
     .carousel-caption h1 {
-      font-size: 3.5rem;
-      font-weight: 600;
-      text-shadow: 0px 2px 8px rgba(0,0,0,0.4);
+      font-size: clamp(20px, 6vw, 28px);
+      margin: 0 0 8px;
+      line-height: 1.2;
+      text-shadow: none;
     }
     .carousel-caption p {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      font-weight: 400;
-      text-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+      font-size: clamp(12px, 4vw, 16px);
+      margin: 0;
+      text-shadow: none;
     }
-
-    /* Controls */
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 30px;
-      border-radius: 50%;
-      background-size: 40px 40px;
-      transition: background-color 0.3s ease;
+    .explore-btn {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      padding: 10px 24px;
     }
-    .carousel-control-prev-icon:hover,
-    .carousel-control-next-icon:hover {
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-
-    /* MOBILE: image top (75vh), caption bottom (25vh), image left aligned */
-    @media (max-width: 768px) {
-      #heroSection { height: auto; min-height: 90vh; }
-      #heroCarousel, .carousel-inner { height: auto; }
-      .carousel-item { background: none !important; min-height: 0; }
-      .carousel-item::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 65vh;
-        background-image: var(--bg);
-        background-size: cover;
-        background-position: left center;
-        background-repeat: no-repeat;
-        z-index: 0;
-      }
-      .carousel-caption {
-        position: static !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        min-height: 25vh;
-        padding: 14px 20px;
-        margin: 0;
-        background: #fff;
-        color: #000;
-        text-align: center;
-        z-index: 1;
-        box-shadow: 0 -1px 10px rgba(0,0,0,0.03);
-        transform: none;
-      }
-      .carousel-caption h1 {
-        font-size: clamp(20px, 6vw, 28px);
-        margin: 0 0 8px;
-        line-height: 1.2;
-        text-shadow: none;
-      }
-      .carousel-caption p {
-        font-size: clamp(12px, 4vw, 16px);
-        margin: 0;
-        text-shadow: none;
-      }
-    }
-  </style>
-
+  }
+</style>
 
 <!-- Top Bar -->
 <div class="top-bar">
@@ -171,55 +196,14 @@
 <section id="heroSection">
   <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
     <div class="carousel-inner">
-
       <!-- Slide 1 -->
       <div class="carousel-item active" style="--bg: url('hero1.jpg'); background-image: url('heros1.webp');">
         <div class="carousel-caption">
           <h1 class="animate__animated animate__fadeInDown">Welcome to<br> TONI &amp; GUY TELLAPUR</h1>
           <p class="animate__animated animate__fadeInUp">Step into style &amp; luxury like never before!</p>
+          <a href="#service" class="explore-btn animate__animated animate__fadeInUp">Explore Now</a>
         </div>
       </div>
-
-      <!-- Slide 2 -->
-      <div class="carousel-item" style="--bg: url('hero2.jpg'); background-image: url('heros2.webp');">
-        <div class="carousel-caption">
-          <h1 class="animate__animated animate__fadeInDown">HAIR COLOUR</h1>
-          <p class="animate__animated animate__fadeInUp">Transform your look with vibrant, trendy &amp; flawless shades tailored for you!</p>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item" style="--bg: url('hero3.webp'); background-image: url('heros3.webp');">
-        <div class="carousel-caption">
-          <h1 class="animate__animated animate__fadeInDown">KERATIN</h1>
-          <p class="animate__animated animate__fadeInUp">Say goodbye to frizz! Smooth, shiny &amp; manageable hair with our premium Keratin treatment!</p>
-        </div>
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="carousel-item" style="--bg: url('heros4.png'); background-image: url('heros4.webp');">
-        <div class="carousel-caption">
-          <h1 class="animate__animated animate__fadeInDown">PEDI &amp; MANI</h1>
-          <p class="animate__animated animate__fadeInUp">Relax &amp; refresh with our luxury pedicure &amp; manicure services.</p>
-        </div>
-      </div>
-
-      <!-- Slide 5 -->
-      <div class="carousel-item" style="--bg: url('heros5.png'); background-image: url('heros5.webp');">
-        <div class="carousel-caption">
-          <h1 class="animate__animated animate__fadeInDown">BRIDAL MAKEUP</h1>
-          <p class="animate__animated animate__fadeInUp">Walk down the aisle with confidence – unforgettable bridal beauty!</p>
-        </div>
-      </div>
-
-      <!-- Slide 6 -->
-      <div class="carousel-item" style="--bg: url('heros6.webp'); background-image: url('heros6.webp');">
-        <div class="carousel-caption">
-          <h1 class="animate__animated animate__fadeInDown">FACIAL</h1>
-          <p class="animate__animated animate__fadeInUp">Glow like never before! Rejuvenating facials for radiant &amp; flawless skin.</p>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -264,8 +248,7 @@
 
 
 
-
-  <!-- OUR EXPERTISE Section -->
+<!-- OUR EXPERTISE Section -->
 <section id="service" class="expertise-section">
   <div class="expertise-heading">
     <h2>Our Expertise</h2>
@@ -277,8 +260,8 @@
       <div class="overlay">
         <h3>Bridal</h3>
         <div class="hover-info">
-          <p>Let our international stylists craft your dream bridal look from elegant updos to flawless makeup and radiant hair treatments.</p>
-          <a href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Hair%20Consultation." class="book-now-btn">Book Now</a>
+          <p>Let our international stylists craft your dream bridal from elegant updos to flawless makeup radiant hair treatments.</p>
+          <a href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Bridal%20Consultation." class="book-now-btn">Book Now</a>
         </div>
       </div>
     </div>
@@ -298,7 +281,7 @@
         <h3>Facial</h3>
         <div class="hover-info">
           <p>Brightening facials, anti-aging treatments & luxury skin care to make you glow from within.</p>
-          <a href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Hair%20Consultation." class="book-now-btn">Book Now</a>
+          <a href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Facial%20Consultation." class="book-now-btn">Book Now</a>
         </div>
       </div>
     </div>
@@ -308,7 +291,7 @@
         <h3>Makeup</h3>
         <div class="hover-info">
           <p>Party & bridal makeup by expert artists – for flawless, camera-ready skin & features.</p>
-          <a href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Hair%20Consultation." class="book-now-btn">Book Now</a>
+          <a href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Makeup%20Consultation." class="book-now-btn">Book Now</a>
         </div>
       </div>
     </div>
@@ -318,12 +301,179 @@
         <h3>Special Offers</h3>
         <div class="hover-info">
           <p>Exclusive launch deals, seasonal offers & premium packages for your transformation.</p>
-          <a href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20a%20Hair%20Consultation." class="book-now-btn">Book Now</a>
+          <a href="https://wa.me/919030015757?text=Hello!%20I'm%20interested%20in%20Special%20Offers." class="book-now-btn">Book Now</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+}
+
+/* Section Styling */
+.expertise-section {
+  padding: 80px 20px 60px;
+  background-color: #fff;
+}
+
+.expertise-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.expertise-heading h2 {
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.expertise-heading p {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Category Panels */
+.split-categories {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 80vh;
+  overflow: hidden;
+}
+
+.category-panel {
+  flex: 1;
+  min-width: 200px;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: flex 0.6s ease-in-out, transform 0.4s ease;
+  cursor: pointer;
+}
+
+.category-panel:hover {
+  flex: 2;
+  transform: scale(1.01);
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  transition: background-color 0.4s ease;
+}
+
+.overlay h3 {
+  font-size: 26px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+}
+
+.hover-info {
+  opacity: 0;
+  max-width: 80%;
+  transition: opacity 0.5s ease;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.category-panel:hover .hover-info {
+  opacity: 1;
+}
+
+/* Premium Book Now Button */
+.book-now-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff6b6b, #ff9f43, #ffd32a);
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: all 0.4s ease;
+  background-size: 300% 300%;
+  animation: gradientMove 5s ease infinite;
+}
+
+.book-now-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .split-categories {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .category-panel {
+    height: 300px;
+    flex: 1 !important;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease-in-out both;
+  }
+
+  .overlay h3 { font-size: 22px; }
+  .hover-info { font-size: 14px; }
+  .expertise-heading h2 { font-size: 32px; }
+  .expertise-heading p { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+  .expertise-heading h2 { font-size: 26px; }
+  .expertise-heading p { font-size: 15px; }
+  .category-panel { height: 250px; }
+  .hover-info { font-size: 13px; }
+  .book-now-btn { padding: 12px 26px; font-size: 14px; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<script>
+// Dynamically set background images from data-bg attributes
+document.querySelectorAll(".category-panel").forEach(panel => {
+  const bg = panel.getAttribute("data-bg");
+  if (bg) panel.style.backgroundImage = `url('${bg}')`;
+});
+</script>
 
 
 <!-- ⭐ BRIDAL BEAUTY SECTION -->
@@ -333,7 +483,7 @@
       <!-- Image Slider -->
       <div class="bridal-slider-wrapper">
         <div class="bridal-image-slider" id="bridalSlider" aria-hidden="false">
-          <img src="bridal1.webp" alt="Bridal Look 1" />
+          <img src="heros5.png" alt="Bridal Look 1" />
           <img src="bridal2.webp" alt="Bridal Look 2" />
           <img src="bridal3.webp" alt="Bridal Look 3" />
           <img src="bridal4.webp" alt="Bridal Look 4" />
