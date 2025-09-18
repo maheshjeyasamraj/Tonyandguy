@@ -27,11 +27,16 @@
 
   </head>
   <body>
-    
+
+
     <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  body { font-family: 'Didot', 'Open Sans', serif; background-color: #fff; color: #000; }
+  body {
+    font-family: 'Didot', 'Open Sans', serif;
+    background-color: #fff;
+    color: #000;
+  }
 
   #heroSection {
     position: relative;
@@ -39,60 +44,76 @@
     height: 100vh;
     overflow: hidden;
   }
+
+  #heroSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: 2;
+  }
+
+  .carousel-inner,
   .carousel-item {
     position: relative;
-    height: 100vh;
-    min-height: 100vh;
+    z-index: 0.5; /* Image layer */
+  }
+
+  .carousel-item {
+    height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
-  .hero-overlay { display: none !important; }
 
   .carousel-caption {
-    top: 50%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    bottom: auto;
-    right: auto;
-    text-align: center;
-    color: #000;
-    width: 90%;
-    max-width: 600px;
     position: absolute;
-    z-index: 5;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 90%;
+    max-width: 650px;
+    z-index: 3; /* Topmost layer */
   }
+
   .carousel-caption h1 {
     font-family: 'Didot', serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    text-shadow: 0px 2px 8px rgba(0,0,0,0.4);
-  }
-  .carousel-caption p {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    font-weight: 400;
-    text-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+    font-size: 3.0rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow:
+      0 0 10px rgba(255,255,255,0.9),
+      0 0 20px rgba(255,255,255,0.7),
+      0 0 40px rgba(0,0,0,0.8);
+    margin-bottom: 20px;
   }
 
   .explore-btn {
     display: inline-block;
-    margin-top: 20px;
     padding: 12px 28px;
-    background: #000;
-    color: #fff;
-    font-weight: 600;
+    background: #ffffff;
+    color: #000;
+    font-weight: 700;
     font-size: 1rem;
     text-transform: uppercase;
     border-radius: 50px;
-    border: 2px solid #000;
+    border: 2px solid #fff;
     transition: all 0.3s ease;
     text-decoration: none;
+    box-shadow: 0 0 18px rgba(255,255,255,0.7);
+    z-index: 3;
+    position: relative;
   }
   .explore-btn:hover {
-    background: #fff;
-    color: #000;
+    background: #000;
+    color: #fff;
     transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255,255,255,0.9);
   }
 
   .carousel-control-prev-icon,
@@ -102,6 +123,7 @@
     border-radius: 50%;
     background-size: 40px 40px;
     transition: background-color 0.3s ease;
+    z-index: 3;
   }
   .carousel-control-prev-icon:hover,
   .carousel-control-next-icon:hover {
@@ -119,61 +141,55 @@
       height: 65vh;
       background-image: var(--bg);
       background-size: cover;
-      background-position: left center;
+      background-position: center;
       background-repeat: no-repeat;
-      z-index: 0;
+      z-index: 1;
     }
+    #heroSection::before { display: none; } /* Remove overlay on mobile */
     .carousel-caption {
-      position: static !important;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      min-height: 25vh;
-      padding: 14px 20px;
-      margin: 0;
+      position: static;
+      transform: none;
+      bottom: auto;
+      padding: 20px;
       background: #fff;
       color: #000;
-      text-align: center;
-      z-index: 1;
-      box-shadow: 0 -1px 10px rgba(0,0,0,0.03);
-      transform: none;
+      box-shadow: 0 -1px 10px rgba(0,0,0,0.05);
+      z-index: 3;
     }
     .carousel-caption h1 {
-      font-size: clamp(20px, 6vw, 28px);
-      margin: 0 0 8px;
-      line-height: 1.2;
+      font-size: clamp(22px, 6vw, 30px);
+      margin-bottom: 12px;
       text-shadow: none;
-    }
-    .carousel-caption p {
-      font-size: clamp(12px, 4vw, 16px);
-      margin: 0;
-      text-shadow: none;
+      color: #000;
     }
     .explore-btn {
-      margin-top: 12px;
       font-size: 0.9rem;
       padding: 10px 24px;
+      background: #000;
+      color: #fff;
+      border: 2px solid #000;
+    }
+    .explore-btn:hover {
+      background: #fff;
+      color: #000;
     }
   }
 </style>
 
 <div class="top-bar">
   <div class="social-icons">
-    <a href="https://www.instagram.com/toniandguytellapur" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.instagram.com/toniandguytellapur/" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="tel:+919030015757"><i class="fas fa-phone"></i></a>
-    <a href="https://www.facebook.com/p/Toniguy-Tellapur-61574831822244/" target="_blank"><i class="fab fa-facebook-f"></i></a>
     <a href="mailto:info@toniandguytellapur.com"><i class="fas fa-envelope"></i></a>
   </div>
   <div class="location">
-    <a href="https://share.google/jpfjXfH7pAUtCbWcY" target="_blank"> TELLAPUR, HYDERABAD </a>
+    <a href="https://share.google/KSyqDwIfOiJN6KSA9" target="_blank"> TELLAPUR, HYDERABAD </a>
   </div>
 </div>
 
 <div class="navbar-custom">
   <div class="logo" onclick="scrollToTop()" style="cursor: pointer;">
-    <img src="Logo.jpg" alt="TONI&GUY" /> 
+    <img src="Logo.jpg" alt="TONI&GUY" />
   </div>
   <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
   <nav id="navLinks">
@@ -188,22 +204,17 @@
 <section id="heroSection">
   <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
     <div class="carousel-inner">
-
-      <div class="carousel-item active" style="--bg: url('hero.jpg'); background-image: url('heros1.webp');">
+      <div class="carousel-item active" style="--bg: url('Home.webp'); background-image: url('Home.webp');">
         <div class="carousel-caption">
-          <h1 class="animate__animated animate__fadeInDown">Welcome to<br> TONI &amp; GUY TELLAPUR</h1>
+          <h1 class="animate__animated animate__fadeInDown">
+            Welcome to TONI &amp; GUY Tellapur
+          </h1>
           <a href="#service" class="explore-btn animate__animated animate__fadeInUp">Explore Now</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
-
-
-
-
 
 
 
